@@ -1,0 +1,26 @@
+<div class="nav">
+  <p>第26回東京湾大華火祭</p>
+</div>
+
+<div class="tamaya-button">
+  <%= image_tag "tamaya_button.png" %>
+</div>
+
+<div class="time-graph">
+  <div class="line"></div>
+  <span class="time">18:00</span>
+  <span class="time">18:30</span>
+  <span class="time">19:00</span>
+  <span class="time">19:30</span>
+  <span class="time">20:00</span>
+</div>
+
+<div class="menu">
+  <%= image_tag "menu1.png" %>
+</div>
+
+<p>user_id: <%= @user_id %></p>
+<p>押した時間</p>
+<% @clicks.each do |c| %>
+  <span><%= c.date_time.to_s.split(" ")[1] %>,</span>
+<% end %>
