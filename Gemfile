@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
+gem 'annotate'
+
+group :production do
+  gem 'therubyracer'
+  gem 'pg'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
