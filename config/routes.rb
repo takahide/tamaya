@@ -5,8 +5,8 @@ Tamaya::Application.routes.draw do
 
   get 'images/:id' => 'images#show'
 
-  get 'images/:id/download' => 'images#download'
-  patch 'images//upload' => 'images#upload'
+  get 'images/:time' => 'images#download'
+  patch 'images/:time' => 'images#upload'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
