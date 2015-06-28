@@ -4,7 +4,7 @@ gem 'annotate'
 
 group :production do
   gem 'therubyracer'
-  gem 'pg'
+  gem 'pg', '0.17.1'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
