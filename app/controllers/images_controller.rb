@@ -1,10 +1,5 @@
 class ImagesController < ApplicationController
   protect_from_forgery with: :null_session
-  def show
-    image = Image.find(params[:id])
-    render json: image, except: [:data]
-  end
-
   def download
     image = Image.find_by_tag(params[:time])
     if image.present?

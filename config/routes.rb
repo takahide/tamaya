@@ -3,8 +3,6 @@ Tamaya::Application.routes.draw do
   get '/' => 'top#index'
   get '/tamaya' => 'top#tamaya'
 
-  get 'images/:id' => 'images#show'
-
   get 'images/:time' => 'images#download'
   patch 'images/:time' => 'images#upload'
 
