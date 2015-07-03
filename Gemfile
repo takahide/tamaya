@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'annotate'
-ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES'] = 'YES'
-gem 'nokogiri', '1.6.0'
 gem 'therubyracer', '= 0.10.2', platforms: :ruby
 gem 'libv8', '= 3.3.10.4'
 

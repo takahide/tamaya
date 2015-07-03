@@ -144,7 +144,6 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   libv8 (= 3.3.10.4)
-  nokogiri (= 1.6.0)
   pg
   rails (= 4.2.1)
   sass-rails (~> 4.0.0)
