@@ -7,5 +7,5 @@ $(document).on "click", ".tamaya-button", ->
 
 $(document).on "touchstart", ".tamaya-button", ->
   setTimeout ->
-    $(".tamaya-button").css("opacity", ".8")
+    $(".tamaya-button").css("opacity", ".3")
   , 3000
