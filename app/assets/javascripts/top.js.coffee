@@ -4,3 +4,8 @@ $(document).on "click", ".tamaya-button", ->
     type: "GET"
     url: "tamaya"
   }
+
+$(document).on "touchstart", ".tamaya-button", ->
+  setTimeout ->
+    $(".tamaya-button").css("opacity", ".8")
+  , 3000
