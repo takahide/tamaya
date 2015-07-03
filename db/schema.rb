@@ -11,17 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150616141657) do
+ActiveRecord::Schema.define(version: 20150630173426) do
 
-  create_table "clicks", force: true do |t|
-    t.string   "user_id"
+  create_table "clicks", force: :cascade do |t|
+    t.string   "user_id",    limit: 255
     t.datetime "date_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "images", force: true do |t|
-    t.string   "tag"
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "tag",        limit: 255
     t.binary   "data"
     t.datetime "created_at"
     t.datetime "updated_at"

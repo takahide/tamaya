@@ -1,7 +1,10 @@
 Tamaya::Application.routes.draw do
 
   get '/' => 'top#index'
+  get '/my-tamaya' => 'top#my_tamaya'
   get '/tamaya' => 'top#tamaya'
+  get '/admin' => 'admin#index'
+  get '/admin/:name/:start_time/:end_time' => 'admin#edit'
 
   get 'images/:time' => 'images#download'
   patch 'images/:time' => 'images#upload'

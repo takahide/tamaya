@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'annotate'
+ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES'] = 'YES'
+gem 'nokogiri', '1.6.0'
+gem 'therubyracer', '= 0.10.2', platforms: :ruby
+gem 'libv8', '= 3.3.10.4'
 
 group :production do
-  gem 'therubyracer'
   gem 'pg'
 end
 
@@ -21,7 +24,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -30,7 +33,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

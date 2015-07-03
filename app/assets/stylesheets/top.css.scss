@@ -36,6 +36,14 @@ body {
   }
   .time {
     color: #a90;
+    &.start {
+      float: left;
+      margin: 1%;
+    }
+    &.end {
+      float: right;
+      margin: 1%;
+    }
   }
 }
 
@@ -43,8 +51,23 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  img {
-    width: 100%;
+  .button {
+    float: left;
+    width: 33%;
+    cursor: pointer;
+    background: #000;
+    text-align: center;
+    padding-top: 5px;
+    border-top: solid 2px #333;
+    img {
+      width: 33%;
+    }
   }
+}
+
+.tamaya-img {
+  width: 19%;
+  margin: 3%;
+  border-radius: 50%;
 }
 

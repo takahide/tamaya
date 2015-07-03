@@ -2,11 +2,20 @@
 <html>
 <head>
   <title>Tamaya</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="style/fireworks.css" media="screen" />
+  <script src="script/soundmanager2-nodebug-jsmin.js"></script>
+  <script src="script/fireworks.js"></script>
 </head>
 <body>
+<div id="fireworks-template">
+   <div id="fw" class="firework"></div>
+   <div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div>
+ </div>
+
+ <div id="fireContainer"></div>
 
 <%= yield %>
 
