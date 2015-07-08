@@ -13,6 +13,11 @@ class TopController < ApplicationController
     @name = e.name
     @start_time = e.start_time
     @end_time = e.end_time
+
+    st = @start_time.split(":")
+    et = @end_time.split(":")
+    @start_unix = Time.new(Time.now.year, Time.now.month, Time.now.day, st[0], st[1]).to_i
+    @end_unix =  Time.new(Time.now.year, Time.now.month, Time.now.day, et[0], et[1]).to_i
   end
 
   def my_tamaya
@@ -34,17 +39,17 @@ class TopController < ApplicationController
     if Click.todays_clicks(user_id).size == 0
       click = Click.new
       click.user_id = user_id
-      click.date_time = DateTime.strptime("18:00", "%H:%M")
+      click.date_time = Time.new(Time.now.year, Time.now.month, Time.now.day) + 18.hours
       click.save
 
       click = Click.new
       click.user_id = user_id
-      click.date_time = DateTime.strptime("18:30", "%H:%M")
+      click.date_time = Time.new(Time.now.year, Time.now.month, Time.now.day) + 18.hours + 30.minutes
       click.save
     end
     click = Click.new
     click.user_id = user_id
-    click.date_time = Time.now
+    click.date_time = Time.zone.now
     click.save
   end
 end

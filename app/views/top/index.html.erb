@@ -8,8 +8,9 @@
 
 <div class="time-graph">
   <div class="line"></div>
-  <div class="time start"><%= @start_time %></div>
-  <div class="time end"><%= @end_time %></div>
+  <div class="dot-holder"></div>
+  <div class="time start" data-unix="<%= @start_unix %>"><%= @start_time %></div>
+  <div class="time end" data-unix="<%= @end_unix %>"><%= @end_time %></div>
 </div>
 
 <div class="menu">
