@@ -19,7 +19,8 @@ $(document).on "click", ".tamaya-button", ->
   right = parseInt($(".time.end").attr("data-unix"))
   dot = 100 * (unix - left) / (right - left)
 
-  createFirework(46, 81, 2, 3, 50, 50, dot, 80, false, false)
+#  createFirework(46, 81, 2, 3, 50, 50, dot, 80, false, false)
+  createFirework(46, 81, 2, 3, null, null, null, null, false, false)
 
   setTimeout ->
     $(".dot-holder").append("<div class='dot' style='left: #{dot}%;'></div>")
