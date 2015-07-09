@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
   def index
-
+    @e = Event.newest
   end
 
   def edit
@@ -12,5 +12,6 @@ class AdminController < ApplicationController
     e.start_time = @start_time
     e.end_time = @end_time
     e.save
+    redirect_to "/admin"
   end
 end

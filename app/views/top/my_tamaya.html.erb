@@ -1,23 +1,44 @@
-<div class="nav">
-  <p><%= @name %></p>
-</div>
-
-<%= tamaya %>
-
 <div class="menu">
   <a href="/">
-    <div class="button menu1">
+    <div class="mybutton menu1">
       <%= image_tag "menu1-inactive.png" %>
     </div>
   </a>
   <a href="/my-tamaya">
-    <div class="button menu2">
+    <div class="mybutton menu2">
       <%= image_tag "menu2-active.png" %>
     </div>
   </a>
   <a href="/graph">
-    <div class="button menu3">
+    <div class="mybutton menu3">
       <%= image_tag "menu3-inactive.png" %>
     </div>
   </a>
+</div>
+
+<div class="popup">
+  <div class="close-popup">×</div>
+  <div class="big-image">
+    <img>
+  </div>
+  <div class="small-image">
+    <img>
+  </div>
+  <div class="small-image">
+    <img>
+  </div>
+  <div class="small-image">
+    <img>
+  </div>
+  <div class="small-image">
+    <img>
+  </div>
+</div>
+
+<div class="nav">
+  <p><%= @name %></p>
+</div>
+
+<div class="container">
+  <%= tamaya %>
 </div>

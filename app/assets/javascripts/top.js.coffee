@@ -1,8 +1,17 @@
 $ ->
   setTimeout ->
-    h = $(".menu").css("height");
+    $("img.tamaya-button").boxCenter()
+    h = $(".menu").css("height")
     $(".time-graph").css("bottom", h)
   , 500
+
+$(document).on "click", ".menu a", ->
+  myApp.showIndicator '情報取得中'
+
+$(document).on "click", ".open-popup", ->
+  image = $(".tamaya-img", @).attr("src")
+  $(".big-image img").attr("src", image)
+  $(".small-image img").attr("src", image)
 
 $(document).on "click", ".tamaya-button", ->
   unix = parseInt((new Date)/1000)
@@ -19,3 +28,11 @@ $(document).on "click", ".tamaya-button", ->
     type: "GET"
     url: "tamaya"
   }
+
+$.fn.boxCenter = ->
+  return this.each (i) ->
+    w = $(@).width()
+    h = $(@).height()
+    mtop = (h/2)*(-1)
+    mleft = (w/2)*(-1)
+    $(@).css({"width": "#{w}px","height": "#{h}px", "top": "47%", "left": "50%", "margin-top": "#{mtop}px", "margin-left": "#{mleft}px"}).css("opacity", "1")

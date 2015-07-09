@@ -5,7 +5,7 @@ class ImagesController < ApplicationController
     if image.present?
       send_data image.data, type: "image/png", disposition: 'inline'
     else
-      redirect_to "http://kinoshitakazuki.com/wp-content/uploads/2013/06/hanabi.jpg"
+      redirect_to "/hanabi.jpg"
     end
   end
 

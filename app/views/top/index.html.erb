@@ -1,31 +1,27 @@
-<div class="nav">
-  <p><%= @name %></p>
-</div>
+<div class="nav"><p><%= @name %></p></div>
 
-<div class="tamaya-button">
-  <%= image_tag "tamaya_button.png" %>
-</div>
+<%= image_tag "tamaya_button.png", class: "tamaya-button" %>
 
 <div class="time-graph">
   <div class="line"></div>
-  <div class="dot-holder"></div>
+  <%= time_graph %>
   <div class="time start" data-unix="<%= @start_unix %>"><%= @start_time %></div>
   <div class="time end" data-unix="<%= @end_unix %>"><%= @end_time %></div>
 </div>
 
 <div class="menu">
   <a href="/">
-    <div class="button menu1">
+    <div class="mybutton menu1">
       <%= image_tag "menu1-active.png" %>
     </div>
   </a>
   <a href="/my-tamaya">
-    <div class="button menu2">
+    <div class="mybutton menu2">
       <%= image_tag "menu2-inactive.png" %>
     </div>
   </a>
   <a href="/graph">
-    <div class="button menu3">
+    <div class="mybutton menu3">
       <%= image_tag "menu3-inactive.png" %>
     </div>
   </a>

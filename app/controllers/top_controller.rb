@@ -8,6 +8,8 @@ class TopController < ApplicationController
       @user_id = Digest::MD5.new.update("tamaya#{rand(100000000000)}").to_s
       cookies.permanent['tamaya_id'] = @user_id
     end
+
+    @clicks = Click.todays_clicks @user_id
     
     e = Event.newest
     @name = e.name
@@ -37,15 +39,25 @@ class TopController < ApplicationController
   def tamaya
     user_id = cookies.permanent['tamaya_id']
     if Click.todays_clicks(user_id).size == 0
-      click = Click.new
-      click.user_id = user_id
-      click.date_time = Time.new(Time.now.year, Time.now.month, Time.now.day) + 18.hours
-      click.save
+      e = Event.newest
+      name = e.name
+      start_time = e.start_time
+      end_time = e.end_time
+      st = start_time.split(":")
+      et = end_time.split(":")
+      for num in 0..23 do
+        if num >= st[0].to_i && num <= et[0].to_i
+          click = Click.new
+          click.user_id = user_id
+          click.date_time = Time.new(Time.now.year, Time.now.month, Time.now.day) + num.hours
+          click.save
 
-      click = Click.new
-      click.user_id = user_id
-      click.date_time = Time.new(Time.now.year, Time.now.month, Time.now.day) + 18.hours + 30.minutes
-      click.save
+          click = Click.new
+          click.user_id = user_id
+          click.date_time = Time.new(Time.now.year, Time.now.month, Time.now.day) + num.hours + 30.minutes
+          click.save
+        end
+      end
     end
     click = Click.new
     click.user_id = user_id

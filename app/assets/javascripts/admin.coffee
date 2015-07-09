@@ -1,3 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$(document).on "click", ".admin-submit", ->
+  myApp.showPreloader '更新中'
+  name = $(".admin .name").val()
+  start_time = $(".admin .start_time").val()
+  end_time = $(".admin .end_time").val()
+  location.href="/admin/#{name}/#{start_time}/#{end_time}"
+
+$(document).on "click", ".to_top", ->
+  location.href="/"
