@@ -15,11 +15,8 @@ class TopController < ApplicationController
     @name = e.name
     @start_time = e.start_time
     @end_time = e.end_time
-
-    st = @start_time.split(":")
-    et = @end_time.split(":")
-    @start_unix = Time.new(Time.now.year, Time.now.month, Time.now.day, st[0], st[1]).to_i
-    @end_unix =  Time.new(Time.now.year, Time.now.month, Time.now.day, et[0], et[1]).to_i
+    @start_unix = e.start_unix
+    @end_unix = e.end_unix
   end
 
   def my_tamaya
@@ -34,6 +31,8 @@ class TopController < ApplicationController
     
     e = Event.newest
     @name = e.name
+    @start = e.start_time.delete(":") + "00"
+    @end = e.end_time.delete(":") + "00"
   end
 
   def tamaya
@@ -46,17 +45,15 @@ class TopController < ApplicationController
       st = start_time.split(":")
       et = end_time.split(":")
       for num in 0..23 do
-        if num >= st[0].to_i && num <= et[0].to_i
-          click = Click.new
-          click.user_id = user_id
-          click.date_time = Time.new(Time.now.year, Time.now.month, Time.now.day) + num.hours
-          click.save
+        click = Click.new
+        click.user_id = user_id
+        click.date_time = Time.new(Time.now.year, Time.now.month, Time.now.day) + num.hours
+        click.save
 
-          click = Click.new
-          click.user_id = user_id
-          click.date_time = Time.new(Time.now.year, Time.now.month, Time.now.day) + num.hours + 30.minutes
-          click.save
-        end
+        click = Click.new
+        click.user_id = user_id
+        click.date_time = Time.new(Time.now.year, Time.now.month, Time.now.day) + num.hours + 30.minutes
+        click.save
       end
     end
     click = Click.new
