@@ -15,6 +15,7 @@ $(document).on "click", ".open-popup", ->
   src = $(".tamaya-img", @).attr("src")
   jpg_file_name = src.split("/")[-1]
   $(".big-image img").attr("src", src)
+  $(".big-image a").attr("href", src)
   $(".small-image img").each ->
     camera = $(@).attr("data-camera")
     $(@).attr("src", "http://lastage.info/#{camera}/#{jpg_file_name}")

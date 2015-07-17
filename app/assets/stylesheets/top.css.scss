@@ -130,8 +130,20 @@ img.tamaya-button {
     font-size: 140%;
   }
   .big-image {
+    position: relative;
     margin-top: 60px;
     width: 100%;
+    .download-button {
+      position: absolute;
+      padding: 20px 0;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      background: rgba(0, 0, 0, .5);
+      color: #fff;
+      font-size: 130%;
+      border-radius: 50px;
+    }
     img {
       width: 100%;
     }

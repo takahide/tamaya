@@ -29,6 +29,7 @@ module TopHelper
           concat content_tag(:div, content_tag(:img, "", src: "http://lastage.info/1/#{jpg_file_name}.jpg", class: "tamaya-img"), class: "tamaya-img-holder open-popup")
         end
       end
+      concat content_tag(:div, "", style: "width: 100%; height: 60px; background: #000; display: inline-block;")
     end
   end
 end
