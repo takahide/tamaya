@@ -1,3 +1,5 @@
+coming = "/coming.jpg"
+
 $ ->
   setTimeout ->
     $("img.tamaya-button").boxCenter()
@@ -6,12 +8,16 @@ $ ->
   , 500
 
   $("img").error ->
-    $(@).attr("src", "/coming.jpg")
+    $(@).attr("src", coming)
+    new_src = $(".big-image img").attr("src")
+    if new_src == coming
+      $(".download-button").css("display", "none")
 
 $(document).on "click", ".menu a", ->
   myApp.showIndicator '情報取得中'
 
 $(document).on "click", ".open-popup", ->
+  $(".download-button").css("display", "block")
   src = $(".tamaya-img", @).attr("src")
   jpg_file_name = src.split("/")[-1]
   $(".big-image img").attr("src", src)
@@ -19,6 +25,12 @@ $(document).on "click", ".open-popup", ->
   $(".small-image img").each ->
     camera = $(@).attr("data-camera")
     $(@).attr("src", "http://lastage.info/#{camera}/#{jpg_file_name}")
+
+$(document).on "click", ".small-image img", ->
+  src = $(@).attr("src")
+  $(".big-image img").attr("src", src)
+  $(".big-image a").attr("href", src)
+
 
 $(document).on "click", ".tamaya-button", ->
   unix = parseInt((new Date)/1000)
