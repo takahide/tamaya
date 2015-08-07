@@ -9,20 +9,4 @@
   <div class="time end" data-unix="<%= @end_unix %>"><%= @end_time %></div>
 </div>
 
-<div class="menu">
-  <a href="/">
-    <div class="mybutton menu1">
-      <%= image_tag "menu1-active.png" %>
-    </div>
-  </a>
-  <a href="/my-tamaya">
-    <div class="mybutton menu2">
-      <%= image_tag "menu2-inactive.png" %>
-    </div>
-  </a>
-  <a href="/graph">
-    <div class="mybutton menu3">
-      <%= image_tag "menu3-inactive.png" %>
-    </div>
-  </a>
-</div>
+<div class="counter"><%= @count %></div>

@@ -1,8 +1,9 @@
 <div class="admin">
   <p>管理画面</p>
   花火大会名: <input class="name" value="<%= @e.name %>"><br>
-  開始時刻: <input class="start_time" value="<%= @e.start_time %>"><br>
-  終了時刻: <input class="end_time" value="<%= @e.end_time %>">
+  開催日: <input class="event_date" value="<%= @e.event_date %>"> <span class="small">例) 2015-8-22</span><br>
+  開始時刻: <input class="start_time" value="<%= @e.start_time %>"> <span class="small">例) 18:00</span><br>
+  終了時刻: <input class="end_time" value="<%= @e.end_time %>"> <span class="small">例) 21:00</span>
   <div class="admin-submit">更新</div>
   <div class="to_top">TOPへ</div>
 </div>

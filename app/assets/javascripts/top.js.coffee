@@ -33,6 +33,10 @@ $(document).on "click", ".small-image img", ->
 
 
 $(document).on "click", ".tamaya-button", ->
+  count = parseInt($(".counter").text())
+  count = count + 1
+  $(".counter").text(count)
+
   unix = parseInt((new Date)/1000)
   left = parseInt($(".time.start").attr("data-unix"))
   right = parseInt($(".time.end").attr("data-unix"))

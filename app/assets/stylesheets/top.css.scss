@@ -27,7 +27,7 @@ img.tamaya-button {
   position: absolute;
   width: 100%;
   bottom: 0%;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   .line {
     width: 100%;
     height: 2px;
@@ -179,4 +179,14 @@ img.tamaya-button {
     color: #000;
     cursor: pointer;
   }
+}
+
+.counter {
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  text-align: right;
+  font-size: 300%;
+  z-index: 99999900;
+  color: #a90;
 }

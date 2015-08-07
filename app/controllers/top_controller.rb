@@ -1,6 +1,11 @@
 require 'digest/md5'
 
 class TopController < ApplicationController
+
+  def lp
+
+  end
+
   def index
     if cookies.permanent['tamaya_id'].present?
       @user_id = cookies.permanent['tamaya_id']
@@ -12,11 +17,18 @@ class TopController < ApplicationController
     @clicks = Click.todays_clicks @user_id
     
     e = Event.newest
+
     @name = e.name
     @start_time = e.start_time
     @end_time = e.end_time
     @start_unix = e.start_unix
     @end_unix = e.end_unix
+
+    @now_unix = Time.now.to_i
+
+    if @now_unix < @start_unix
+      render "lp"
+    end
   end
 
   def my_tamaya
@@ -33,6 +45,10 @@ class TopController < ApplicationController
     @name = e.name
     @start = e.start_time.delete(":") + "00"
     @end = e.end_time.delete(":") + "00"
+  end
+
+  def graph
+    @chart_date = Click.group(:user_id).count
   end
 
   def tamaya
