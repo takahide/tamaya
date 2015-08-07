@@ -29,6 +29,10 @@ class TopController < ApplicationController
     if @now_unix < @start_unix
       render "lp"
     end
+
+    if @now_unix > @end_unix
+      render "my_tamaya"
+    end
   end
 
   def my_tamaya
