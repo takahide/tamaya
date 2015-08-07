@@ -19,7 +19,8 @@ $(document).on "click", ".menu a", ->
 $(document).on "click", ".open-popup", ->
   $(".download-button").css("display", "block")
   src = $(".tamaya-img", @).attr("src")
-  jpg_file_name = src.split("/")[-1]
+  file_name_arr = src.split("/")
+  jpg_file_name = file_name_arr[file_name_arr.length - 1]
   $(".big-image img").attr("src", src)
   $(".big-image a").attr("href", src)
   $(".small-image img").each ->
