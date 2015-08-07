@@ -14,7 +14,7 @@ class TopController < ApplicationController
       cookies.permanent['tamaya_id'] = @user_id
     end
 
-    @clicks = Click.todays_clicks @user_id
+    @clicks = Click.users_clicks @user_id
     
     e = Event.newest
 
@@ -34,7 +34,7 @@ class TopController < ApplicationController
   def my_tamaya
     if cookies.permanent['tamaya_id'].present?
       @user_id = cookies.permanent['tamaya_id']
-      @clicks = Click.todays_clicks @user_id
+      @clicks = Click.users_clicks @user_id
     else
       @user_id = Digest::MD5.new.update("tamaya#{rand(100000000000)}").to_s
       cookies.permanent['tamaya_id'] = @user_id
