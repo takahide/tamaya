@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'annotate'
 gem 'therubyracer', '= 0.10.2', platforms: :ruby
 gem 'libv8', '= 3.3.10.4'
-gem 'chartkick'
 
 group :production do
   gem 'pg'
