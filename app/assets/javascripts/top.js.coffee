@@ -10,14 +10,11 @@ $ ->
   $("img").error ->
     $(@).attr("src", coming)
     new_src = $(".big-image img").attr("src")
-    if new_src == coming
-      $(".download-button").css("display", "none")
 
 $(document).on "click", ".menu a", ->
   myApp.showIndicator '情報取得中'
 
 $(document).on "click", ".open-popup", ->
-  $(".download-button").css("display", "block")
   src = $(".tamaya-img", @).attr("src")
   file_name_arr = src.split("/")
   jpg_file_name = file_name_arr[file_name_arr.length - 1]
