@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>module TopHelper - Rails Application Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-tamaya">#tamaya</a>
+    
+    <li ><a href="#method-i-time_graph">#time_graph</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-TopHelper">
+  <h1 id="module-TopHelper" class="module">
+    module TopHelper
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-tamaya" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tamaya</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="tamaya-source">
+            <pre><span class="ruby-comment"># File app/helpers/top_helper.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tamaya</span> 
+  <span class="ruby-identifier">content_tag</span> <span class="ruby-value">:div</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@clicks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">today</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%Y%m%d&quot;</span>)
+      <span class="ruby-identifier">start_int</span> = <span class="ruby-ivar">@start</span>.<span class="ruby-identifier">to_i</span>
+      <span class="ruby-identifier">end_int</span> = <span class="ruby-ivar">@end</span>.<span class="ruby-identifier">to_i</span>
+      <span class="ruby-identifier">jpg_file_name</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">date_time</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%Y%m%d%H%M%S&quot;</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">jpg_file_name</span>[<span class="ruby-value">10</span><span class="ruby-operator">..</span><span class="ruby-value">13</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;3000&quot;</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">jpg_file_name</span>[<span class="ruby-value">10</span><span class="ruby-operator">..</span><span class="ruby-value">13</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;0000&quot;</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">start_int</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">jpg_file_name</span>[<span class="ruby-value">8</span><span class="ruby-operator">..</span><span class="ruby-value">13</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">jpg_file_name</span>[<span class="ruby-value">8</span><span class="ruby-operator">..</span><span class="ruby-value">13</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">end_int</span>
+        <span class="ruby-identifier">month</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">date_time</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%m&quot;</span>).<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">day</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">date_time</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%d&quot;</span>).<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">time</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">date_time</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%k:%M&quot;</span>)
+        <span class="ruby-identifier">day_of_week</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">date_time</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%a&quot;</span>).<span class="ruby-identifier">upcase</span>
+        <span class="ruby-identifier">html</span> = <span class="ruby-node">&quot;&lt;span class=&#39;small&#39;&gt;#{month}.#{day}&lt;/span&gt;&lt;br&gt;&lt;span class=&#39;normal&#39;&gt;#{time}&lt;/span&gt;&lt;br&gt;&lt;span class=&#39;small&#39;&gt;#{day_of_week}&lt;/span&gt;&quot;</span>
+        <span class="ruby-identifier">concat</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-identifier">raw</span>(<span class="ruby-identifier">html</span>), <span class="ruby-identifier">class</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;white-time&quot;</span>), <span class="ruby-identifier">class</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;white-time-holder&quot;</span>)
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">today</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">jpg_file_name</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">7</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">start_int</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">jpg_file_name</span>[<span class="ruby-value">8</span><span class="ruby-operator">..</span><span class="ruby-value">13</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">jpg_file_name</span>[<span class="ruby-value">8</span><span class="ruby-operator">..</span><span class="ruby-value">13</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">end_int</span>
+        <span class="ruby-identifier">concat</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:img</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">src</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;http://lastage.info/1/#{jpg_file_name}.jpg&quot;</span>, <span class="ruby-identifier">class</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;tamaya-img&quot;</span>), <span class="ruby-identifier">class</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;tamaya-img-holder open-popup&quot;</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">concat</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">style</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;width: 100%; height: 60px; background: #000; display: inline-block;&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-time_graph" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">time_graph</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="time_graph-source">
+            <pre><span class="ruby-comment"># File app/helpers/top_helper.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">time_graph</span>
+  <span class="ruby-identifier">content_tag</span> <span class="ruby-value">:div</span>, <span class="ruby-identifier">class</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;dot-holder&quot;</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@clicks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">date_time</span>.<span class="ruby-identifier">min</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">date_time</span>.<span class="ruby-identifier">min</span> <span class="ruby-operator">==</span> <span class="ruby-value">30</span>
+      <span class="ruby-identifier">unixtime</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">date_time</span>.<span class="ruby-identifier">to_i</span>
+      <span class="ruby-identifier">left</span> = <span class="ruby-value">100</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">unixtime</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@start_unix</span>) <span class="ruby-operator">/</span> (<span class="ruby-ivar">@end_unix</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@start_unix</span>)
+      <span class="ruby-identifier">concat</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">class</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;dot&quot;</span>, <span class="ruby-identifier">style</span><span class="ruby-value">:&quot;left: #{left}%&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

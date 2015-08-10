@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150809130947) do
 
   create_table "clicks", force: :cascade do |t|
-    t.string   "user_id",    limit: 255
+    t.string   "user_id"
     t.datetime "date_time"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150809130947) do
   end
 
   create_table "images", force: :cascade do |t|
-    t.string   "tag",        limit: 255
+    t.string   "tag"
     t.binary   "data"
     t.datetime "created_at"
     t.datetime "updated_at"

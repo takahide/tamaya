@@ -27,7 +27,7 @@ class TopController < ApplicationController
     @now_unix = Time.now.to_i
 
     if @now_unix < @start_unix
-      render "lp"
+      render "lp" 
     end
 
     if @now_unix > @end_unix
