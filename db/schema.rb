@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807013632) do
+ActiveRecord::Schema.define(version: 20150809130947) do
 
   create_table "clicks", force: :cascade do |t|
     t.string   "user_id",    limit: 255
     t.datetime "date_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "time_int"
   end
 
   create_table "events", force: :cascade do |t|

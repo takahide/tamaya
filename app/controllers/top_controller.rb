@@ -52,7 +52,7 @@ class TopController < ApplicationController
   end
 
   def graph
-    @chart_date = Click.group(:user_id).count
+    @clicks = Click.group(:time_int).count
   end
 
   def tamaya
@@ -78,7 +78,13 @@ class TopController < ApplicationController
     end
     click = Click.new
     click.user_id = user_id
-    click.date_time = Time.zone.now
+    date_time = Time.zone.now
+    click.date_time = date_time
+    month =  date_time.month
+    day =  date_time.day
+    hour =  date_time.hour
+    min =  date_time.min
+    click.time_int = month*1000000 + day*10000 + hour*100 + min
     click.save
   end
 end
