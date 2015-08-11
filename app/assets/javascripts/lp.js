@@ -6,6 +6,7 @@ $(function () {
             $(".bg").animate({
                 "height": "1000px"
             }, 1000);
+	    
         } else {
             $(".about").slideToggle();
             $(".bg").animate({
