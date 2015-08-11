@@ -3,7 +3,7 @@ require 'digest/md5'
 class TopController < ApplicationController
 
   def lp
-
+      render :layout => 'lp'
   end
 
   def index

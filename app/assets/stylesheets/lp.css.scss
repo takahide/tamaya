@@ -212,6 +212,7 @@ section.top {
 section.about {
     position: relative;
     z-index: 100;
+    display: none;
     .copy {
         width: 82.3%;
         max-width: 500px;
@@ -317,6 +318,18 @@ section.about {
         }
     }
 }
+.menu_btn {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        text-align: center;
+        z-index: 1000;
+        img {
+            width: 49.5%;
+            max-width: 300px;
+            z-index: 100;
+        }
+    }
 
 section.usable {
     position: relative;
@@ -324,6 +337,7 @@ section.usable {
     width: 78%;
     margin: 0 auto;
     margin-bottom: 30px;
+    display: none;
     h1 {
         color: #d8ad67;
         font: 500 20px / 34px AxisStd;
@@ -338,6 +352,9 @@ section.usable {
         .type_con {
             font: 500 14px / 30px AxisStd;
             color: #ffffff;
+	    a{
+                 text-decoration: underline;
+            }
         }
         .end {
             margin-bottom: 15px;
@@ -356,7 +373,6 @@ section.usable {
         }
         .map {
             width: 100%;
-            max-width: 500px;
             margin: 0 auto;
         }
         .spot {
@@ -493,7 +509,7 @@ footer {
                 margin: 0;
             }
             .type_con {
-                font: 500 18px / 40px AxisStd;
+                font: 500 22px / 40px AxisStd;
                 color: #ffffff;
             }
             .end {
@@ -506,4 +522,18 @@ footer {
             }
         }
     }
+    section.extra {
+    width: 78%;
+    margin: 0 auto;
+    h1 {
+        font: 500 26px / 28px AxisStd;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+    .link {
+        font: 500 18px / 28px AxisStd;
+        color: #ffffff;
+        text-decoration: underline;
+    }
+}
 }
