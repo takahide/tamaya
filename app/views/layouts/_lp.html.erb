@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>たまやボタンLP</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="style/fireworks.css" media="screen" />
+  <script src="script/soundmanager2-nodebug-jsmin.js"></script>
+  <script src="script/fireworks.js"></script>
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+  <%= favicon_link_tag 'icon.png' %>
+</head>
+<body>
+<div id="fireworks-template">
+   <div id="fw" class="firework"></div>
+   <div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div>
+ </div>
+
+ <div id="fireContainer"></div>
+
+<%= yield %>
+<script src="/my-app.js"></script>
+
+</body>
+</html>
