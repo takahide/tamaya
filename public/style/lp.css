@@ -192,8 +192,40 @@ section.about {
     font: 100 13px / 38px TBChibiRGoPlusKPro;
     font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
     margin-bottom: 20px; }
+  section.about section.howto_00 {
+    position: relative;
+    margin: 0 auto;
+    width: 99%;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    section.about section.howto_00 .left_box {
+      display: block;
+      margin-left: 10%;
+      width: 35%;
+      float: left;
+       }
+.howto_title{
+     margin-top: 40px;
+}
+      section.about section.howto_00 .right_box .right {
+        width: 80%;
+        margin-left: 15px; }
+    section.about section.howto_00 .right_box {
+      float: left;
+      width: 50%;
+       }
+      section.about section.howto_00 .left_box .howto_title {
+        font: 800 18px / 30px AxisStd;
+        color: #d8ad67;
+        margin-bottom: 10px; }
+      section.about section.howto_00 .left_box .howto {
+        font: 500 13px / 30px AxisStd;
+        text-align: left;
+        color: #ffffff; }
   section.about section.howto_01 {
     position: relative;
+    margin: 0 auto;
     overflow: hidden;
     margin-top: 30px;
     margin-bottom: 30px; }
@@ -235,6 +267,7 @@ section.about {
       margin: 0 auto; }
   section.about section.howto_03 {
     position: relative;
+    margin: 0 auto;
     overflow: hidden;
     margin-top: 60px;
     margin-bottom: 60px; }
@@ -316,14 +349,19 @@ section.usable {
 
 section.extra {
   width: 78%;
+  position:relative;
+  z-index: 1000;
   margin: 0 auto; }
-  section.extra h1 {
-    font: 500 18px / 28px AxisStd;
-    color: #ffffff; }
   section.extra .link {
     font: 500 14px / 28px AxisStd;
+    margin-bottom:20px;
     color: #ffffff;
-    text-decoration: underline; }
+    text-align: center;
+    text-decoration: underline;
+    z-index: 1000; }
+  .link a{
+    color:#ffffff;
+    z-index: 1000; }
 
 footer {
   padding: 30px auto;
@@ -350,6 +388,33 @@ footer {
   section.about .copy_desc {
     font: 100 20px / 48px TBChibiRGoPlusKPro;
     font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro"; }
+ section.about section.howto_00 {
+    position: relative;
+    margin: 0 auto;
+    width: 99%;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    section.about section.howto_00 .left_box {
+      display: block;
+      float: left;
+       }
+      section.about section.howto_00 .right_box .right {
+        width: 80%;
+        max-width: 300px;
+        margin-left: 15px; }
+    section.about section.howto_00 .right_box {
+      float: left;
+      width: 50%;
+       }
+      section.about section.howto_00 .left_box .howto_title {
+        font: 800 28px / 50px AxisStd;
+        color: #d8ad67;
+        margin-bottom: 10px; }
+      section.about section.howto_00 .left_box .howto {
+        font: 500 20px / 50px AxisStd;
+        text-align: left;
+        color: #ffffff; } 
   section.about section.howto_01 .left_box {
     display: block;
     float: left;
@@ -420,11 +485,8 @@ footer {
   section.extra {
     width: 78%;
     margin: 0 auto; }
-    section.extra h1 {
-      font: 500 26px / 28px AxisStd;
-      margin-bottom: 15px;
-      color: #ffffff; }
     section.extra .link {
       font: 500 18px / 28px AxisStd;
+      text-align: center;
       color: #ffffff;
       text-decoration: underline; } }
