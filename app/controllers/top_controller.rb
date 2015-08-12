@@ -27,11 +27,11 @@ class TopController < ApplicationController
     @now_unix = Time.now.to_i
 
     if @now_unix < @start_unix
-      render "lp" 
+      redirect_to "/lp"
     end
 
     if @now_unix > @end_unix
-      render "my_tamaya"
+      redirect_to "/my-tamaya"
     end
   end
 
