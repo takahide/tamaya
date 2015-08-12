@@ -2,10 +2,6 @@ require 'digest/md5'
 
 class TopController < ApplicationController
 
-  def lp
-      render :layout => 'lp'
-  end
-
   def index
     if cookies.permanent['tamaya_id'].present?
       @user_id = cookies.permanent['tamaya_id']
