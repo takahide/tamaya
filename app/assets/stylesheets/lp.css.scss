@@ -56,484 +56,484 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 html,
 body {
-    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    background: #000;
-    overflow-x: hidden;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background: #000;
+  overflow-x: hidden;
 }
 
 #wrapper {
-    background-color: #000;
+  background-color: #000;
 }
 
 .bg {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 1000px;
+  .bgff_01 {
     position: absolute;
-    left: 50%;
-    width: 100%;
-    height: 1000px;
-    .bgff_01 {
-        position: absolute;
-        width: 30%;
-        max-width: 200px;
-        left: 30%;
-    }
-    .bgff_02 {
-        position: absolute;
-        top: 5%;
-        width: 20%;
-        max-width: 150px;
-        left: -50%;
-    }
-    .bgff_03 {
-        position: absolute;
-        top: 7%;
-        width: 30%;
-        max-width: 100px;
-        left: 30%;
-    }
-    .bgff_04 {
-        position: absolute;
-        top: 14%;
-        width: 20%;
-        max-width: 100px;
-        left: -50%;
-    }
-    .bgff_05 {
-        position: absolute;
-        top: 24%;
-        width: 40%;
-        max-width: 200px;
-        left: 30%;
-    }
-    .bgff_06 {
-        position: absolute;
-        top: 40%;
-        width: 30%;
-        max-width: 150px;
-        left: -50%;
-    }
-    .bgff_07 {
-        position: absolute;
-        top: 55%;
-        width: 20%;
-        max-width: 100px;
-        left: 30%;
-    }
-    .bgff_08 {
-        position: absolute;
-        top: 65%;
-        width: 30%;
-        max-width: 200px;
-        left: -60%;
-    }
-    .bgff_09 {
-        position: absolute;
-        top: 70%;
-        width: 40%;
-        max-width: 200px;
-        left: 30%;
-    }
-    .bgff_10 {
-        position: absolute;
-        top: 80%;
-        width: 30%;
-        max-width: 150px;
-        left: -50%;
-    }
-    .bgff_11 {
-        position: absolute;
-        top: 90%;
-        width: 20%;
-        max-width: 100px;
-        left: 30%;
-    }
+    width: 30%;
+    max-width: 200px;
+    left: 30%;
+  }
+  .bgff_02 {
+    position: absolute;
+    top: 5%;
+    width: 20%;
+    max-width: 150px;
+    left: -50%;
+  }
+  .bgff_03 {
+    position: absolute;
+    top: 7%;
+    width: 30%;
+    max-width: 100px;
+    left: 30%;
+  }
+  .bgff_04 {
+    position: absolute;
+    top: 14%;
+    width: 20%;
+    max-width: 100px;
+    left: -50%;
+  }
+  .bgff_05 {
+    position: absolute;
+    top: 24%;
+    width: 40%;
+    max-width: 200px;
+    left: 30%;
+  }
+  .bgff_06 {
+    position: absolute;
+    top: 40%;
+    width: 30%;
+    max-width: 150px;
+    left: -50%;
+  }
+  .bgff_07 {
+    position: absolute;
+    top: 55%;
+    width: 20%;
+    max-width: 100px;
+    left: 30%;
+  }
+  .bgff_08 {
+    position: absolute;
+    top: 65%;
+    width: 30%;
+    max-width: 200px;
+    left: -60%;
+  }
+  .bgff_09 {
+    position: absolute;
+    top: 70%;
+    width: 40%;
+    max-width: 200px;
+    left: 30%;
+  }
+  .bgff_10 {
+    position: absolute;
+    top: 80%;
+    width: 30%;
+    max-width: 150px;
+    left: -50%;
+  }
+  .bgff_11 {
+    position: absolute;
+    top: 90%;
+    width: 20%;
+    max-width: 100px;
+    left: 30%;
+  }
 }
 
 header {
-    h1 {
-        text-align: center;
-        padding-top: 60px;
-        .logo {
-            width: 82.3%;
-            max-width: 470px;
-            margin: 0 auto;
-        }
+  h1 {
+    text-align: center;
+    padding-top: 60px;
+    .logo {
+      width: 82.3%;
+      max-width: 470px;
+      margin: 0 auto;
     }
+  }
 }
 
 section.top {
-    position: relative;
-    z-index: 100;
-    .desc {
-        color: #d8ad67;
-        text-align: center;
-        font: 100 16.5px / 32px TBChibiRGoPlusKPro;
-        font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
-        margin: 23px auto;
+  position: relative;
+  z-index: 100;
+  .desc {
+    color: #d8ad67;
+    text-align: center;
+    font: 100 16.5px / 32px TBChibiRGoPlusKPro;
+    font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
+    margin: 23px auto;
+  }
+  .open {
+    font: 400 22px / 36.319px HelveticaNeue;
+    color: #ffffff;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .btn01 {
+    width: 78.6%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+  }
+  .alert {
+    font: 500 14px / 19.217px AxisStd;
+    color: #999999;
+    text-align: center;
+    margin: 15px auto;
+  }
+  .ff {
+    display: block;
+    width: 13.3%;
+    margin: 0 auto;
+    text-align: center;
+    margin: 25px auto;
+    max-width: 100px;
+  }
+  .menu_btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    img {
+      width: 49.5%;
+      max-width: 300px;
     }
-    .open {
-        font: 400 22px / 36.319px HelveticaNeue;
-        color: #ffffff;
-        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-        text-align: center;
-        margin-bottom: 24px;
-    }
-    .btn01 {
-        width: 78.6%;
-        max-width: 400px;
-        display: block;
-        margin: 0 auto;
-    }
-    .alert {
-        font: 500 14px / 19.217px AxisStd;
-        color: #999999;
-        text-align: center;
-        margin: 15px auto;
-    }
-    .ff {
-        display: block;
-        width: 13.3%;
-        margin: 0 auto;
-        text-align: center;
-        margin: 25px auto;
-        max-width: 100px;
-    }
-    .menu_btn {
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        text-align: center;
-        img {
-            width: 49.5%;
-            max-width: 300px;
-        }
-    }
+  }
 }
 
 section.about {
-    position: relative;
-    z-index: 100;
-    display: none;
-    .copy {
-        width: 82.3%;
-        max-width: 500px;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        display: block;
-    }
-    .copy_desc {
-        color: #d8ad67;
-        text-align: center;
-        font: 100 13px / 38px TBChibiRGoPlusKPro;
-        font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
-        margin-bottom: 20px;
-    }
-    section.howto_01 {
-        position: relative;
-        overflow: hidden;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        .left_box {
-            display: block;
-            float: left;
-            width: 50%;
-            .left {
-                width: 80%;
-                margin-left: 35px;
-            }
-        }
-        .right_box {
-            float: left;
-            margin-left: 15px;
-            .howto_title {
-                font: 800 18px / 30px AxisStd;
-                color: #d8ad67;
-                margin-bottom: 10px;
-            }
-            .howto {
-                font: 500 13px / 30px AxisStd;
-                text-align: left;
-                color: #ffffff;
-            }
-        }
-    }
-    section.howto_02 {
-        width: 78.1%;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        .howto_title {
-            font: 800 18px / 30px AxisStd;
-            color: #d8ad67;
-            margin-bottom: 10px;
-        }
-        .howto {
-            font: 500 13px / 30px AxisStd;
-            text-align: left;
-            color: #ffffff;
-            margin-bottom: 23px;
-        }
-        .spot_desc {
-            width: 100%;
-            display: block;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-    }
-    section.howto_03 {
-        position: relative;
-        overflow: hidden;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        .left_box {
-            display: block;
-            float: left;
-            width: 50%;
-            .left {
-                width: 80%;
-                margin-left: 35px;
-            }
-        }
-        .right_box {
-            float: left;
-            margin-left: 15px;
-            .howto_title {
-                font: 800 18px / 30px AxisStd;
-                color: #d8ad67;
-                margin-bottom: 10px;
-            }
-            .howto {
-                font: 500 13px / 30px AxisStd;
-                text-align: left;
-                color: #ffffff;
-            }
-        }
-    }
-    .menu_btn {
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        text-align: center;
-        img {
-            width: 49.5%;
-            max-width: 300px;
-        }
-    }
-}
-.menu_btn {
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        text-align: center;
-        z-index: 1000;
-        img {
-            width: 49.5%;
-            max-width: 300px;
-            z-index: 100;
-        }
-    }
-
-section.usable {
-    position: relative;
-    z-index: 100;
-    width: 78%;
+  position: relative;
+  z-index: 100;
+  display: none;
+  .copy {
+    width: 82.3%;
+    max-width: 500px;
     margin: 0 auto;
     margin-bottom: 30px;
-    display: none;
-    h1 {
+    display: block;
+  }
+  .copy_desc {
+    color: #d8ad67;
+    text-align: center;
+    font: 100 13px / 38px TBChibiRGoPlusKPro;
+    font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
+    margin-bottom: 20px;
+  }
+  section.howto_01 {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .left_box {
+      display: block;
+      float: left;
+      width: 50%;
+      .left {
+        width: 80%;
+        margin-left: 35px;
+      }
+    }
+    .right_box {
+      float: left;
+      margin-left: 15px;
+      .howto_title {
+        font: 800 18px / 30px AxisStd;
         color: #d8ad67;
-        font: 500 20px / 34px AxisStd;
-        text-align: center;
+        margin-bottom: 10px;
+      }
+      .howto {
+        font: 500 13px / 30px AxisStd;
+        text-align: left;
+        color: #ffffff;
+      }
     }
-    .desc_use {
-        .type {
-            font: 500 17px / 40px AxisStd;
-            color: #ffffff;
-            margin: 0;
-        }
-        .type_con {
-            font: 500 14px / 30px AxisStd;
-            color: #ffffff;
-	    a{
-                 text-decoration: underline;
-            }
-        }
-        .end {
-            margin-bottom: 15px;
-        }
-        .alert {
-            font: 500 13px / 19.217px AxisStd;
-            color: #999999;
-            margin: 10px auto;
-        }
-        .btn02 {
-            display: block;
-            width: 90%;
-            max-width: 400px;
-            margin: 0 auto;
-            margin-bottom: 15px;
-        }
-        .map {
-            width: 100%;
-            margin: 0 auto;
-        }
-        .spot {
-            margin-right: 20px;
-        }
+  }
+  section.howto_02 {
+    width: 78.1%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    .howto_title {
+      font: 800 18px / 30px AxisStd;
+      color: #d8ad67;
+      margin-bottom: 10px;
     }
+    .howto {
+      font: 500 13px / 30px AxisStd;
+      text-align: left;
+      color: #ffffff;
+      margin-bottom: 23px;
+    }
+    .spot_desc {
+      width: 100%;
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+  section.howto_03 {
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    .left_box {
+      display: block;
+      float: left;
+      width: 50%;
+      .left {
+        width: 80%;
+        margin-left: 35px;
+      }
+    }
+    .right_box {
+      float: left;
+      margin-left: 15px;
+      .howto_title {
+        font: 800 18px / 30px AxisStd;
+        color: #d8ad67;
+        margin-bottom: 10px;
+      }
+      .howto {
+        font: 500 13px / 30px AxisStd;
+        text-align: left;
+        color: #ffffff;
+      }
+    }
+  }
+  .menu_btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    img {
+      width: 49.5%;
+      max-width: 300px;
+    }
+  }
+}
+.menu_btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+  z-index: 1000;
+  img {
+    width: 49.5%;
+    max-width: 300px;
+    z-index: 100;
+  }
+}
+
+section.usable {
+  position: relative;
+  z-index: 100;
+  width: 78%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: none;
+  h1 {
+    color: #d8ad67;
+    font: 500 20px / 34px AxisStd;
+    text-align: center;
+  }
+  .desc_use {
+    .type {
+      font: 500 17px / 40px AxisStd;
+      color: #ffffff;
+      margin: 0;
+    }
+    .type_con {
+      font: 500 14px / 30px AxisStd;
+      color: #ffffff;
+      a{
+        text-decoration: underline;
+      }
+    }
+    .end {
+      margin-bottom: 15px;
+    }
+    .alert {
+      font: 500 13px / 19.217px AxisStd;
+      color: #999999;
+      margin: 10px auto;
+    }
+    .btn02 {
+      display: block;
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+    .map {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .spot {
+      margin-right: 20px;
+    }
+  }
 }
 
 section.extra {
-    width: 78%;
-    margin: 0 auto;
-    h1 {
-        font: 500 18px / 28px AxisStd;
-        color: #ffffff;
-    }
-    .link {
-        font: 500 14px / 28px AxisStd;
-        color: #ffffff;
-        text-decoration: underline;
-    }
+  width: 78%;
+  margin: 0 auto;
+  h1 {
+    font: 500 18px / 28px AxisStd;
+    color: #ffffff;
+  }
+  .link {
+    font: 500 14px / 28px AxisStd;
+    color: #ffffff;
+    text-decoration: underline;
+  }
 }
 
 footer {
-    padding: 30px auto;
-    text-align: center;
-    p {
-        font: 400 10.7px / 20px HelveticaNeue;
-        color: #999999;
-        line-height: 60px;
-    }
+  padding: 30px auto;
+  text-align: center;
+  p {
+    font: 400 10.7px / 20px HelveticaNeue;
+    color: #999999;
+    line-height: 60px;
+  }
 }
 
 @media (min-width: 900px) {
-    main {
-        width: 1000px;
+  main {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  section.top {
+    .desc {
+      font: 100 23.5px / 42px TBChibiRGoPlusKPro;
+    }
+    .open {
+      font: 400 30px / 46.319px HelveticaNeue;
+    }
+    .alert {
+      font: 500 18px / 19.217px AxisStd;
+    }
+    .ff {
+      margin: 40px auto;
+    }
+  }
+  section.about {
+    .copy_desc {
+      font: 100 20px / 48px TBChibiRGoPlusKPro;
+      font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
+    }
+    section.howto_01 {
+      .left_box {
+        display: block;
+        float: left;
+        width: 50%;
+        .left {
+          width: 80%;
+          max-width: 300px;
+          margin-left: 115px;
+        }
+      }
+      .right_box {
+        float: left;
+        margin-left: 15px;
+        padding-top: 140px;
+        .howto_title {
+          font: 800 28px / 50px AxisStd;
+          color: #d8ad67;
+          margin-bottom: 20px;
+        }
+        .howto {
+          font: 500 20px / 50px AxisStd;
+        }
+      }
+    }
+    section.howto_02 {
+      width: 78.1%;
+      max-width: 760px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      .howto_title {
+        font: 800 28px / 50px AxisStd;
+      }
+      .howto {
+        font: 500 20px / 50px AxisStd;
+      }
+      .spot_desc {
+        width: 100%;
         margin: 0 auto;
+      }
     }
-    section.top {
-        .desc {
-            font: 100 23.5px / 42px TBChibiRGoPlusKPro;
+    section.howto_03 {
+      .left_box {
+        display: block;
+        float: left;
+        width: 50%;
+        .left {
+          width: 80%;
+          max-width: 300px;
+          margin-left: 115px;
         }
-        .open {
-            font: 400 30px / 46.319px HelveticaNeue;
+      }
+      .right_box {
+        float: left;
+        margin-left: 15px;
+        padding-top: 80px;
+        .howto_title {
+          font: 800 28px / 50px AxisStd;
+          color: #d8ad67;
+          margin-bottom: 20px;
         }
-        .alert {
-            font: 500 18px / 19.217px AxisStd;
+        .howto {
+          font: 500 20px / 50px AxisStd;
         }
-        .ff {
-            margin: 40px auto;
-        }
+      }
     }
-    section.about {
-        .copy_desc {
-            font: 100 20px / 48px TBChibiRGoPlusKPro;
-            font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
-        }
-        section.howto_01 {
-            .left_box {
-                display: block;
-                float: left;
-                width: 50%;
-                .left {
-                    width: 80%;
-                    max-width: 300px;
-                    margin-left: 115px;
-                }
-            }
-            .right_box {
-                float: left;
-                margin-left: 15px;
-                padding-top: 140px;
-                .howto_title {
-                    font: 800 28px / 50px AxisStd;
-                    color: #d8ad67;
-                    margin-bottom: 20px;
-                }
-                .howto {
-                    font: 500 20px / 50px AxisStd;
-                }
-            }
-        }
-        section.howto_02 {
-            width: 78.1%;
-            max-width: 760px;
-            margin: 0 auto;
-            margin-bottom: 30px;
-            .howto_title {
-                font: 800 28px / 50px AxisStd;
-            }
-            .howto {
-                font: 500 20px / 50px AxisStd;
-            }
-            .spot_desc {
-                width: 100%;
-                margin: 0 auto;
-            }
-        }
-        section.howto_03 {
-            .left_box {
-                display: block;
-                float: left;
-                width: 50%;
-                .left {
-                    width: 80%;
-                    max-width: 300px;
-                    margin-left: 115px;
-                }
-            }
-            .right_box {
-                float: left;
-                margin-left: 15px;
-                padding-top: 80px;
-                .howto_title {
-                    font: 800 28px / 50px AxisStd;
-                    color: #d8ad67;
-                    margin-bottom: 20px;
-                }
-                .howto {
-                    font: 500 20px / 50px AxisStd;
-                }
-            }
-        }
+  }
+  section.usable {
+    h1 {
+      color: #d8ad67;
+      font: 500 30px / 54px AxisStd;
+      text-align: center;
     }
-    section.usable {
-        h1 {
-            color: #d8ad67;
-            font: 500 30px / 54px AxisStd;
-            text-align: center;
-        }
-        .desc_use {
-            .type {
-                font: 500 26px / 50px AxisStd;
-                color: #ffffff;
-                margin: 0;
-            }
-            .type_con {
-                font: 500 22px / 40px AxisStd;
-                color: #ffffff;
-            }
-            .end {
-                margin-bottom: 30px;
-            }
-            .alert {
-                font: 500 18px / 19.217px AxisStd;
-                color: #999999;
-                margin: 10px auto;
-            }
-        }
+    .desc_use {
+      .type {
+        font: 500 26px / 50px AxisStd;
+        color: #ffffff;
+        margin: 0;
+      }
+      .type_con {
+        font: 500 22px / 40px AxisStd;
+        color: #ffffff;
+      }
+      .end {
+        margin-bottom: 30px;
+      }
+      .alert {
+        font: 500 18px / 19.217px AxisStd;
+        color: #999999;
+        margin: 10px auto;
+      }
     }
-    section.extra {
+  }
+  section.extra {
     width: 78%;
     margin: 0 auto;
     h1 {
-        font: 500 26px / 28px AxisStd;
-        margin-bottom: 15px;
-        color: #ffffff;
+      font: 500 26px / 28px AxisStd;
+      margin-bottom: 15px;
+      color: #ffffff;
     }
     .link {
-        font: 500 18px / 28px AxisStd;
-        color: #ffffff;
-        text-decoration: underline;
+      font: 500 18px / 28px AxisStd;
+      color: #ffffff;
+      text-decoration: underline;
     }
-}
+  }
 }
