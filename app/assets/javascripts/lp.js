@@ -6,6 +6,8 @@ $(function () {
             $(".bg").animate({
                 "height": "1000px"
             }, 1000);
+            $("#menu_01").attr("src", "/assets/about_btn.png");
+	    $("section.top .menu_btn img").css({width: "49.5%", "max-width": "300px"});
 	    
         } else {
             $(".about").slideToggle();
@@ -13,6 +15,8 @@ $(function () {
                 "height": "2000px"
             }, 1000);
             $(".about").addClass("open");
+	    $("#menu_01").attr("src", "/assets/howto_title.png");
+            $("section.top .menu_btn img").css({width: "70%", "max-width": "500px"});
         }
     });
 });
