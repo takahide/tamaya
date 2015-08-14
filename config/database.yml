@@ -21,6 +21,6 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: tamaya
+  database: tamaya_prod
   pool: 5
   timeout: 5000
