@@ -7,7 +7,6 @@ $(function () {
                 "height": "1000px"
             }, 1000);
             $("#menu_01").attr("src", "/about_btn.png");
-	    $("section.top .menu_btn img").css({width: "49.5%", "max-width": "300px"});
 	    
         } else {
             $(".about").slideToggle();
@@ -15,8 +14,7 @@ $(function () {
                 "height": "2000px"
             }, 1000);
             $(".about").addClass("open");
-	    $("#menu_01").attr("src", "/howto_title.png");
-            $("section.top .menu_btn img").css({width: "70%", "max-width": "500px"});
+	    $("#menu_01").attr("src", "/howto_btn.png");
         }
     });
 });
@@ -25,6 +23,7 @@ $(function () {
         if ($(".usable").hasClass("open")) {
             $(".usable").removeClass("open");
             $(".usable").slideToggle();
+            $("#menu_02").attr("src", "/usable_btn.png");
             if ((".about").hasClass("open")) {
                 $(".bg").animate({
                     "height": "2000px"
@@ -37,6 +36,7 @@ $(function () {
         } else {
             $(".usable").slideToggle();
             $(".usable").addClass("open");
+            $("#menu_02").attr("src", "/usable_btn_active.png");
             if ((".about").hasClass("open")) {
                 $(".bg").animate({
                     "height": "3000px"
