@@ -17,9 +17,9 @@ $(document).on "click", ".menu a", ->
 $(document).on "click", ".open-popup", ->
   src = $(".tamaya-img", @).attr("src")
   file_name_arr = src.split("/")
-  jpg_file_name = file_name_arr[file_name_arr.length - 1]
-  $(".big-image img").attr("src", src)
-  $(".big-image a").attr("href", src)
+  jpg_file_name = file_name_arr[file_name_arr.length - 1].split("_")[0] + ".JPG"
+  $(".big-image img").attr("src", "http://lastage.info/1/#{jpg_file_name}")
+  $(".big-image a").attr("href", "http://lastage.info/1/#{jpg_file_name}")
   $(".small-image img").each ->
     camera = $(@).attr("data-camera")
     $(@).attr("src", "http://lastage.info/#{camera}/#{jpg_file_name}")

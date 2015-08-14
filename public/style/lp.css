@@ -192,11 +192,11 @@ section.about {
     font: 100 13px / 38px Hiragino Maru Gothic Pro;
     font-family: "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
     margin-bottom: 20px; }
-  section.about .howto_title {
+  section.about .howto_title_img {
     width: 80%;
     max-width: 600px;
     display: block;
-    margin: 30px auto; }
+    margin: 50px auto; }
   section.about section.howto_00 {
     position: relative;
     margin: 0 auto;
@@ -349,7 +349,8 @@ section.usable {
     margin: 0 auto;
     margin-bottom: 15px; }
   section.usable .desc_use .map {
-    width: 100%;
+    display: block;
+    width: 80%;
     margin: 0 auto; }
   section.usable .desc_use .spot {
     margin-right: 20px; }
@@ -390,6 +391,12 @@ footer {
     font: 100 23.5px / 42px Hiragino Maru Gothic Pro; }
   section.top .open {
     font: 400 30px / 46.319px HelveticaNeue; }
+  section.top .sns_link p {
+    text-align: center; 
+    font: 500 18px / 19.217px AxisStd; 
+    margin: 30px auto; }
+  section.top .sns_link .facebook {
+    color: #ffffff; } 
   section.top .alert {
     font: 500 18px / 19.217px AxisStd; }
   section.top .ff {

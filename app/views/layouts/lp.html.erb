@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html  xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
   <title>たまやボタン</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property="og:title" content="たまやボタン" />
+  <meta property="og:description" content="目で見た花火がスマホに届く" />
+  <meta property="og:url" content="http://tamayabutton.com" />
+  <meta property="og:image" content="/assets/tamaya_ogp.png" />
+  <meta property="og:site_name" content="たまやボタン" />
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="style/fireworks.css" media="screen" />
@@ -12,6 +17,14 @@
   <%= favicon_link_tag 'icon.png' %>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4&appId=307294179337294";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div id="fireworks-template">
    <div id="fw" class="firework"></div>
    <div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div>
