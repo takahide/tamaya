@@ -59,71 +59,71 @@ body {
 .bg {
   position: absolute;
   left: 50%;
-  width: 100%;
+  width: 50%;
   height: 1000px; }
   .bg .bgff_01 {
     position: absolute;
-    width: 30%;
+    width: 60%;
     max-width: 200px;
-    left: 30%; }
+    left: 60%; }
   .bg .bgff_02 {
     position: absolute;
-    top: 5%;
-    width: 20%;
+    top: 7%;
+    width: 40%;
     max-width: 150px;
-    left: -50%; }
+    left: -100%; }
   .bg .bgff_03 {
     position: absolute;
-    top: 7%;
-    width: 30%;
+    top: 10%;
+    width: 60%;
     max-width: 100px;
-    left: 30%; }
+    left: 60%; }
   .bg .bgff_04 {
     position: absolute;
-    top: 14%;
-    width: 20%;
+    top: 20%;
+    width: 40%;
     max-width: 100px;
-    left: -50%; }
+    left: -100%; }
   .bg .bgff_05 {
     position: absolute;
     top: 24%;
-    width: 40%;
+    width: 80%;
     max-width: 200px;
-    left: 30%; }
+    left: 60%; }
   .bg .bgff_06 {
     position: absolute;
     top: 40%;
-    width: 30%;
+    width: 60%;
     max-width: 150px;
-    left: -50%; }
+    left: -120%; }
   .bg .bgff_07 {
     position: absolute;
     top: 55%;
-    width: 20%;
+    width: 40%;
     max-width: 100px;
-    left: 30%; }
+    left: 80%; }
   .bg .bgff_08 {
     position: absolute;
     top: 65%;
-    width: 30%;
+    width: 60%;
     max-width: 200px;
-    left: -60%; }
+    left: -100%; }
   .bg .bgff_09 {
     position: absolute;
     top: 70%;
-    width: 40%;
+    width: 80%;
     max-width: 200px;
-    left: 30%; }
+    left: 60%; }
   .bg .bgff_10 {
     position: absolute;
     top: 80%;
-    width: 30%;
+    width: 40%;
     max-width: 150px;
-    left: -50%; }
+    left: -100%; }
   .bg .bgff_11 {
     position: absolute;
     top: 90%;
-    width: 20%;
+    width: 40%;
     max-width: 100px;
     left: 30%; }
 
@@ -141,8 +141,8 @@ section.top {
   section.top .desc {
     color: #d8ad67;
     text-align: center;
-    font: 100 16.5px / 32px TBChibiRGoPlusKPro;
-    font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
+    font: 100 16.5px / 32px Hiragino Maru Gothic Pro;
+    font-family:  "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
     margin: 23px auto; }
   section.top .open {
     font: 400 22px / 36.319px HelveticaNeue;
@@ -189,9 +189,14 @@ section.about {
   section.about .copy_desc {
     color: #d8ad67;
     text-align: center;
-    font: 100 13px / 38px TBChibiRGoPlusKPro;
-    font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
+    font: 100 13px / 38px Hiragino Maru Gothic Pro;
+    font-family: "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
     margin-bottom: 20px; }
+  section.about .howto_title {
+    width: 80%;
+    max-width: 600px;
+    display: block;
+    margin: 30px auto; }
   section.about section.howto_00 {
     position: relative;
     margin: 0 auto;
@@ -299,12 +304,14 @@ section.about {
       max-width: 300px; }
 
 .menu_btn {
+  position: relative;
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
   text-align: center;
   z-index: 1000; }
   .menu_btn img {
+    cursor: pointer;
     width: 49.5%;
     max-width: 300px;
     z-index: 100; }
@@ -357,9 +364,9 @@ section.extra {
     margin-bottom:20px;
     color: #ffffff;
     text-align: center;
-    text-decoration: underline;
     z-index: 1000; }
   .link a{
+    text-decoration: underline;
     color:#ffffff;
     z-index: 1000; }
 
@@ -372,12 +379,15 @@ footer {
     line-height: 60px; }
 
 @media (min-width: 900px) {
+ html,body{
+    overflow-x: hidden;
+}
   main {
     width: 1000px;
     margin: 0 auto; }
 
   section.top .desc {
-    font: 100 23.5px / 42px TBChibiRGoPlusKPro; }
+    font: 100 23.5px / 42px Hiragino Maru Gothic Pro; }
   section.top .open {
     font: 400 30px / 46.319px HelveticaNeue; }
   section.top .alert {
@@ -386,8 +396,8 @@ footer {
     margin: 40px auto; }
 
   section.about .copy_desc {
-    font: 100 20px / 48px TBChibiRGoPlusKPro;
-    font-family: "TBChibiRGoPlusKPro", "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro"; }
+    font: 100 20px / 48px Hiragino Maru Gothic Pro;
+    font-family:  "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro"; }
  section.about section.howto_00 {
     position: relative;
     margin: 0 auto;
