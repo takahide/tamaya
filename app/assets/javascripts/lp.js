@@ -4,14 +4,14 @@ $(function () {
             $(".about").removeClass("open");
             $(".about").slideToggle();
             $(".bg").animate({
-                "height": "1000px"
+                "height": "1500px"
             }, 1000);
             $("#menu_01").attr("src", "/about_btn.png");
 	    
         } else {
             $(".about").slideToggle();
             $(".bg").animate({
-                "height": "2000px"
+                "height": "3000px"
             }, 1000);
             $(".about").addClass("open");
 	    $("#menu_01").attr("src", "/howto_btn.png");
@@ -24,20 +24,20 @@ $(function () {
             $(".usable").removeClass("open");
             $(".usable").slideToggle();
             $("#menu_02").attr("src", "/usable_btn.png");
-            if ((".about").hasClass("open")) {
+            if ($("section.about").hasClass("open")) {
                 $(".bg").animate({
-                    "height": "2000px"
+                    "height": "3500px"
                 }, 1000);
             } else {
                 $(".bg").animate({
-                    "height": "1000px"
+                    "height": "1500px"
                 }, 1000);
             }
         } else {
             $(".usable").slideToggle();
             $(".usable").addClass("open");
             $("#menu_02").attr("src", "/usable_btn_active.png");
-            if ((".about").hasClass("open")) {
+            if ($("section.about").hasClass("open")) {
                 $(".bg").animate({
                     "height": "3000px"
                 }, 1000);
