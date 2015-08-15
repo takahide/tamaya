@@ -134,10 +134,34 @@ header h1 {
     width: 82.3%;
     max-width: 470px;
     margin: 0 auto; }
-
+#sns{
+  margin: 40px auto;
+  text-align: center; }
 section.top {
   position: relative;
   z-index: 100; }
+  section.top #pc_alert{
+    display: block;
+    margin:30px auto;
+    text-align: center;
+    color: #ffffff;
+    font: 500 14px / 19.217px AxisStd;
+  }
+  iframe#twitter-widget-0{
+    margin-right: 15px;
+  }
+  iframe#twitter-widget-1{
+    margin-right: 15px;
+  }
+  span#line{
+    margin-right: 15px;
+  }
+  section.top .sns_link p {
+    text-align: center;
+    font: 500 14px / 19.217px AxisStd;
+    margin: 30px auto; }
+  section.top .sns_link .facebook {
+    color: #ffffff; }
   section.top .desc {
     color: #d8ad67;
     text-align: center;
@@ -506,4 +530,4 @@ footer {
       font: 500 18px / 28px AxisStd;
       text-align: center;
       color: #ffffff;
-      text-decoration: underline; } }
+       } }
