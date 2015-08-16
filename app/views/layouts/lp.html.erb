@@ -14,10 +14,17 @@
   <link rel="stylesheet" type="text/css" href="style/lp.css" media="screen" />
   <script src="script/soundmanager2-nodebug-jsmin.js"></script>
   <script src="script/fireworks.js"></script>
-  <script>
-    if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-      $("#pc_alert").css("display","none");
-}
+  <script type="text/javascript">
+    var ua = navigator.userAgent;
+	if (ua.indexOf('iPhone') > 0
+			|| (ua.indexOf('Android') > 0) && (ua.indexOf('Mobile') > 0)
+			|| ua.indexOf('Windows Phone') > 0) {
+           $(function() {
+               $("#pc_alert").css("display","none");
+               $(".btn01").css("display","block");
+               $(".alert").css("display","block");
+           });
+	}
   </script>
   <%= favicon_link_tag 'icon.png' %>
 </head>
