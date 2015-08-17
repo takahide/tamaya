@@ -51,9 +51,18 @@ $(document).on "click", ".tamaya-button", ->
   setTimeout ->
     $(".dot-holder").append("<div class='dot' style='left: #{dot}%;'></div>")
   , 300
+
+  date = new Date()
+  year = date.getFullYear()
+  month = date.getMonth() + 1
+  day = date.getDate()
+  hour = date.getHours()
+  minute = date.getMinutes()
+  second = date.getSeconds()
+
   $.ajax {
     type: "GET"
-    url: "tamaya"
+    url: "tamaya/#{year}/#{month}/#{day}/#{hour}/#{minute}/#{second}"
   }
 
 $.fn.boxCenter = ->

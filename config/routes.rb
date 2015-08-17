@@ -4,7 +4,7 @@ Tamaya::Application.routes.draw do
   get '/button' => 'top#index'
   get '/my-tamaya' => 'top#my_tamaya'
   get '/graph' => 'top#graph'
-  get '/tamaya' => 'top#tamaya'
+  get '/tamaya/:year/:month/:day/:hour/:minute/:second' => 'top#tamaya'
   get '/admin' => 'admin#index'
   get '/admin/:name/:start_time/:end_time/:event_date' => 'admin#edit'
 
