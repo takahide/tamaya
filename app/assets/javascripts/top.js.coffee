@@ -1,4 +1,5 @@
 coming = "/coming.jpg"
+button_lock = 0
 
 $ ->
   setTimeout ->
@@ -31,10 +32,6 @@ $(document).on "click", ".small-image img", ->
 
 
 $(document).on "click", ".tamaya-button", ->
-  count = parseInt($(".counter").text())
-  count = count + 1
-  $(".counter").text(count)
-
   rand = Math.floor( Math.random() * 12 ) + 1
   se = $("#tamaya#{rand}")
   se[0].currentTime = 0
@@ -60,10 +57,19 @@ $(document).on "click", ".tamaya-button", ->
   minute = date.getMinutes()
   second = date.getSeconds()
 
-  $.ajax {
-    type: "GET"
-    url: "tamaya/#{year}/#{month}/#{day}/#{hour}/#{minute}/#{second}"
-  }
+  if button_lock == 0
+    $.ajax {
+      type: "GET"
+      url: "tamaya/#{year}/#{month}/#{day}/#{hour}/#{minute}/#{second}"
+    }
+    count = parseInt($(".counter").text())
+    count = count + 1
+    $(".counter").text(count)
+
+    button_lock = 1
+    setTimeout ->
+      button_lock = 0
+    , 1000
 
 $.fn.boxCenter = ->
   return this.each (i) ->
