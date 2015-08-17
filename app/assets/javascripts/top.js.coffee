@@ -35,6 +35,11 @@ $(document).on "click", ".tamaya-button", ->
   count = count + 1
   $(".counter").text(count)
 
+  rand = Math.floor( Math.random() * 12 ) + 1
+  se = $("#tamaya#{rand}")
+  se[0].currentTime = 0
+  se[0].play()
+
   unix = parseInt((new Date)/1000)
   left = parseInt($(".time.start").attr("data-unix"))
   right = parseInt($(".time.end").attr("data-unix"))

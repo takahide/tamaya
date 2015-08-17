@@ -10,3 +10,10 @@
 </div>
 
 <div class="counter"><%= @count %></div>
+
+
+<% for i in 1..12 %>
+<audio id="tamaya<%= i %>" preload="auto">
+  <source src="audio/tamaya<%= i %>.mp3" type="audio/mp3">
+</audio>
+<% end %>
