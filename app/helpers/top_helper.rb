@@ -14,6 +14,7 @@ module TopHelper
 
   def tamaya 
     content_tag :div do
+      index = 0
       @clicks.each do |c|
         today = Time.now.strftime("%Y%m%d")
         start_int = @start.to_i
@@ -29,10 +30,11 @@ module TopHelper
           html = "<span class='small'>#{month}.#{day}</span><br><span class='normal'>#{time}</span><br><span class='small'>#{day_of_week}</span>"
           concat content_tag(:div, content_tag(:div, raw(html), class: "white-time"), class: "white-time-holder")
         elsif start_int <= jpg_file_name[8..13].to_i && jpg_file_name[8..13].to_i <= end_int
-          concat content_tag(:div, content_tag(:img, "", src: "http://lastage.info/1/#{jpg_file_name}_thum.jpg", class: "tamaya-img"), class: "tamaya-img-holder open-popup")
+          concat content_tag(:div, content_tag(:img, "", src: "http://lastage.info/1/#{jpg_file_name}_thum.jpg", class: "tamaya-img", id: index), class: "tamaya-img-holder open-popup")
+          index += 1
         end
       end
-      concat content_tag(:div, "", style: "width: 100%; height: 60px; background: #000; display: inline-block;")
+      concat content_tag(:div, "", style: "width: 100%; height: 60px; background: #000; display: inline-block;", id: index, class: "tamaya-count")
     end
   end
 end

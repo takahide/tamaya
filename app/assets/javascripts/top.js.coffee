@@ -1,5 +1,6 @@
 coming = "/coming.jpg"
 button_lock = 0
+slide = 0
 
 $ ->
   setTimeout ->
@@ -16,7 +17,56 @@ $(document).on "click", ".menu a", ->
   myApp.showIndicator '情報取得中'
 
 $(document).on "click", ".open-popup", ->
+  id = parseInt $("img", @).attr("id")
+  $(".popup .next").attr("next", id + 1)
+  $(".popup .prev").attr("prev", id - 1)
+  slide = id
+
+  if id == 0
+    $(".popup .prev").css("display", "none")
+
+  if id == parseInt($(".tamaya-count").attr("id")) - 1
+    $(".popup .next").css("display", "none")
+
   src = $(".tamaya-img", @).attr("src")
+  file_name_arr = src.split("/")
+  jpg_file_name = file_name_arr[file_name_arr.length - 1].split("_")[0] + ".jpg"
+  $(".big-image img").attr("src", "http://lastage.info/1/#{jpg_file_name}")
+  $(".big-image a").attr("href", "http://lastage.info/1/#{jpg_file_name}")
+  $(".small-image img").each ->
+    camera = $(@).attr("data-camera")
+    $(@).attr("src", "http://lastage.info/#{camera}/#{jpg_file_name}")
+
+$(document).on "click", ".popup .next", ->
+  slide = parseInt($(@).attr("next"))
+  $(".popup .prev").css("display", "block").attr("prev", slide - 1)
+  $(".popup .next").css("display", "block").attr("next", slide + 1)
+  if slide == 0
+    $(".popup .prev").css("display", "none")
+  if slide == parseInt($(".tamaya-count").attr("id")) - 1
+    $(".popup .next").css("display", "none")
+
+  src = $("##{slide}").attr("src")
+  file_name_arr = src.split("/")
+  jpg_file_name = file_name_arr[file_name_arr.length - 1].split("_")[0] + ".jpg"
+  $(".big-image img").attr("src", "http://lastage.info/1/#{jpg_file_name}")
+  $(".big-image a").attr("href", "http://lastage.info/1/#{jpg_file_name}")
+  $(".small-image img").each ->
+    camera = $(@).attr("data-camera")
+    $(@).attr("src", "http://lastage.info/#{camera}/#{jpg_file_name}")
+
+$(document).on "click", ".popup .prev", ->
+  slide = parseInt($(@).attr("prev"))
+  $(".popup .prev").css("display", "block").attr("prev", slide - 1)
+  $(".popup .next").css("display", "block").attr("next", slide + 1)
+  $(".popup .prev").css("display", "block")
+  $(".popup .next").css("display", "block")
+  if slide == 0
+    $(".popup .prev").css("display", "none")
+  if slide == parseInt($(".tamaya-count").attr("id")) - 1
+    $(".popup .next").css("display", "none")
+
+  src = $("##{slide}").attr("src")
   file_name_arr = src.split("/")
   jpg_file_name = file_name_arr[file_name_arr.length - 1].split("_")[0] + ".jpg"
   $(".big-image img").attr("src", "http://lastage.info/1/#{jpg_file_name}")
