@@ -20,15 +20,11 @@
   <script src="script/fireworks.js"></script>
   <script type="text/javascript">
     var ua = navigator.userAgent;
-	if (ua.indexOf('iPhone') > 0
-			|| (ua.indexOf('Android') > 0) && (ua.indexOf('Mobile') > 0)
-			|| ua.indexOf('Windows Phone') > 0) {
            $(function() {
                $("#pc_alert").css("display","none");
                $(".btn01").css("display","block");
                $(".alert").css("display","block");
            });
-	}
   </script>
   <%= favicon_link_tag 'icon.png' %>
   <script>
