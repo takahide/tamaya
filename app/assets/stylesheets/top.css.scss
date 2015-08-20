@@ -9,6 +9,7 @@ body {
 }
 
 .nav {
+  margin-top: 30px;
   p {
     text-align: center;
     color: #fff;
@@ -172,10 +173,37 @@ img.tamaya-button {
 
 .counter {
   position: absolute;
-  top: 80px;
-  right: 30px;
-  text-align: right;
-  font-size: 300%;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 200%;
   z-index: 99999900;
   color: #a90;
+}
+.very-small {
+  font-size: 50%;
+}
+
+
+.popup {
+  .prev {
+    color: #fff;
+    font-size: 300%;
+    position: absolute;
+    top: 40%;
+    left: 0px;
+    padding: 20px;
+    z-index: 100000;
+    cursor: pointer;
+  }
+  .next {
+    color: #fff;
+    font-size: 300%;
+    position: absolute;
+    top: 40%;
+    right: 0px;
+    padding: 20px;
+    z-index: 100000;
+    cursor: pointer;
+  }
 }

@@ -48,6 +48,13 @@ class TopController < ApplicationController
   end
 
   def tamaya
+    now_year = params[:year]
+    now_month = params[:month]
+    now_day = params[:day]
+    now_hour = params[:hour]
+    now_minute = params[:minute]
+    now_second = params[:second]
+
     user_id = cookies.permanent['tamaya_id']
     if Click.todays_clicks(user_id).size == 0
       e = Event.newest
@@ -70,7 +77,7 @@ class TopController < ApplicationController
     end
     click = Click.new
     click.user_id = user_id
-    date_time = Time.zone.now
+    date_time = Time.new(now_year, now_month, now_day, now_hour, now_minute, now_second)
     click.date_time = date_time
     month =  date_time.month
     day =  date_time.day
