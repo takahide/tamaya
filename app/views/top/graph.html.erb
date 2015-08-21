@@ -3,20 +3,37 @@
     <script>
         var clicks = new Array();
         var per5min = new Array();
+	var min5 = 0;
         var min5clicks = 0;
-        var min5 = 0;
         var l = 0;
-        <% for i in 8202250..8202350 do %>
+        <% for i in 8202235..8202259 do %>
             var j = Number(<%= @clicks[i] %>);
                clicks.push(j);  
         <% end%>
-        console.log(clicks[2]);
-        <% while min5 < 17 %>
-                min5clicks = min5clicks + clicks[min5];
+        <% for h in 8202300..8202359 do %>
+            var g = Number(<%= @clicks[h] %>);
+               clicks.push(g);
+        <% end%>
+	var k = 0;
+        <% for k in 0 .. 80 do %>
+        console.log(clicks[k]);
+        k = k + 1;
+        <% end %>
+        <% for l in 1 .. 18 do %>
+	    <% for min5 in 0 .. 4 %>
+                min5clicks = min5clicks + clicks[l*5 + min5];
 		min5 = min5 + 1;
-		console.log(min5clicks);
+	    <% end %>
+	    l = l + 1;
+	    per5min.push(min5clicks);
+	    min5 = 0;
+	    min5clicks = 0;
 	<% end%>
-
+	var m = 0;
+        <% for m in 1 .. 16 do %>
+        console.log(per5min[m]);
+        m = m + 1;
+        <% end %>
         var data = {
             labels: ["19:00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "20:00", "05", "10", "15"],
             datasets: [
@@ -29,7 +46,7 @@
                     pointStrokeColor: "#fff",
                     pointHighlightFill: "#fff",
                     pointHighlightStroke: "rgba(151,187,205,1)",
-                    data: [per5min[0], per5min[1], 40, 19, 86, 27, 90, 48, 40, 19, 86, 27, 90, 48, 40, 19, 86, 27, 90]
+                    data: [per5min[0], per5min[1], per5min[2], per5min[3], per5min[4], per5min[5], per5min[6], per5min[7], per5min[8], per5min[9], per5min[10], per5min[11], per5min[12], per5min[13], per5min[14], per5min[15]]
           }
       ]
         };
