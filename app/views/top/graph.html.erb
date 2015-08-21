@@ -1,18 +1,24 @@
 <%= @clicks[8092225] %>
 <canvas id="graph"></canvas>
     <script>
+        var clicks = new Array();
+        var per5min = new Array();
+        var min5clicks = 0;
         var min5 = 0;
-        <% for i in 8172213..8172330 do %>
+        var l = 0;
+        <% for i in 8202250..8202350 do %>
             var j = Number(<%= @clicks[i] %>);
-            if(j != null || j != undefined || j != 0){
-                min5 = min5 + j;
-            }
-            console.log(min5);
+               clicks.push(j);  
         <% end%>
+        console.log(clicks[2]);
+        <% while min5 < 17 %>
+                min5clicks = min5clicks + clicks[min5];
+		min5 = min5 + 1;
+		console.log(min5clicks);
+	<% end%>
 
         var data = {
-            labels: ["19:00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "20:00",
-      "05", "10", "15"],
+            labels: ["19:00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "20:00", "05", "10", "15"],
             datasets: [
 
                 {
@@ -23,7 +29,7 @@
                     pointStrokeColor: "#fff",
                     pointHighlightFill: "#fff",
                     pointHighlightStroke: "rgba(151,187,205,1)",
-                    data: [28, <%= @clicks[8172213] %>, 40, 19, 86, 27, 90, 48, 40, 19, 86, 27, 90, 48, 40, 19, 86, 27, 90]
+                    data: [per5min[0], per5min[1], 40, 19, 86, 27, 90, 48, 40, 19, 86, 27, 90, 48, 40, 19, 86, 27, 90]
           }
       ]
         };
