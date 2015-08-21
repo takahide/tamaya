@@ -112,9 +112,9 @@ $(document).on "click", ".tamaya-button", ->
       type: "GET"
       url: "tamaya/#{year}/#{month}/#{day}/#{hour}/#{minute}/#{second}"
     }
-    count = parseInt($(".counter").text())
+    count = parseInt($(".counter .number").text())
     count = count + 1
-    $(".counter").text(count)
+    $(".counter .number").text(count)
 
     button_lock = 1
     setTimeout ->
