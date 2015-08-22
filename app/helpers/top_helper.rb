@@ -30,7 +30,7 @@ module TopHelper
           html = "<span class='small'>#{month}.#{day}</span><br><span class='normal'>#{time}</span><br><span class='small'>#{day_of_week}</span>"
           concat content_tag(:div, content_tag(:div, raw(html), class: "white-time"), class: "white-time-holder")
         elsif start_int <= jpg_file_name[8..13].to_i && jpg_file_name[8..13].to_i <= end_int
-          concat content_tag(:div, content_tag(:img, "", src: "http://lastage.info/1/#{jpg_file_name}_thum.jpg", class: "tamaya-img", id: index), class: "tamaya-img-holder open-popup")
+          concat content_tag(:div, content_tag(:img, "", src: "http://lastage.info/3/#{jpg_file_name}_thum.jpg", class: "tamaya-img", id: index), class: "tamaya-img-holder open-popup")
           index += 1
         end
       end
