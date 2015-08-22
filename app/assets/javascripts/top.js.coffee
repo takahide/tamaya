@@ -31,9 +31,9 @@ $(document).on "click", ".open-popup", ->
   src = $(".tamaya-img", @).attr("src")
   file_name_arr = src.split("/")
   jpg_file_name = file_name_arr[file_name_arr.length - 1].split("_")[0] + ".jpg"
-  $(".big-image img").attr("src", "http://lastage.info/1/#{jpg_file_name}")
+  $(".big-image img").attr("src", "http://lastage.info/3/#{jpg_file_name}")
   if jpg_file_name.indexOf("coming") == -1
-    $(".big-image a").attr("href", "http://lastage.info/1/#{jpg_file_name}")
+    $(".big-image a").attr("href", "http://lastage.info/3/#{jpg_file_name}")
   else
     $(".big-image a").attr("href", "#")
   $(".small-image img").each ->
