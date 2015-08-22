@@ -22,9 +22,6 @@ class TopController < ApplicationController
 
     @now_unix = Time.now.to_i
 
-    if @now_unix > @end_unix
-      redirect_to "/my-tamaya"
-    end
   end
 
   def my_tamaya
