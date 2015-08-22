@@ -8,7 +8,7 @@ $ ->
     $(".time-graph").css("bottom", h)
   , 500
 
-  $(".hoge-img").error ->
+  $("img").error ->
     rand = Math.floor( Math.random() * 7 ) + 1
     $(@).attr("src", "/coming_0#{rand}.png")
     new_src = $(".big-image img").attr("src")
