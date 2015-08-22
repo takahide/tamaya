@@ -12,8 +12,8 @@ class LpController < ApplicationController
     if now_unix > end_unix
       @to_my_tamaya_img = "btn_02.png"
       @to_my_tamaya_onclick = "location.href='/my-tamaya'"
-      @to_graph_img = "btn_03.png"
-      @to_graph_onclick = "location.href='/graph'"
+#      @to_graph_img = "btn_03.png"
+#      @to_graph_onclick = "location.href='/graph'"
     elsif now_unix > start_unix
       @to_button_img = "btn_01.png"
       @to_button_onclick = "location.href='/button'"
