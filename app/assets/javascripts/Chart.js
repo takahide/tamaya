@@ -1152,11 +1152,12 @@
 				var ctx = this.ctx;
 				var width = this.width = ctx.canvas.width;
                 		var height = this.height = ctx.canvas.height;
+				var line_ave = height/2;
+				var graphY = this.y*2;
+				console.log(line_ave);
+				console.log(graphY);
 				ctx.beginPath();
-				//tamaya original
 				ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
-				ctx.moveTo(this.x , height-40);
-				ctx.lineTo(this.x, this.y);
 				ctx.closePath();
 
 				ctx.strokeStyle = this.strokeColor;
@@ -1166,6 +1167,23 @@
 
 				ctx.fill();
 				ctx.stroke();
+				//tamaya original
+				var graphY0 = height-100; 
+				ctx.beginPath();
+                                ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+                                if(graphY < line_ave){
+                                ctx.moveTo(this.x , graphY0);
+                                ctx.lineTo(this.x, this.y);
+                                }
+                                ctx.closePath();
+
+                                ctx.strokeStyle = this.strokeColor;
+                                ctx.lineWidth = 5;
+
+                                ctx.fillStyle = this.fillColor;
+
+                                ctx.fill();
+                                ctx.stroke();
 			}
 
 
@@ -1217,16 +1235,11 @@
 			return {
 				x : this.x + (Math.cos(centreAngle) * rangeFromCentre),
 				y : this.y + (Math.sin(centreAngle) * rangeFromCentre)
-			};
 		},
 		draw : function(animationPercent){
 
 			var easingDecimal = animationPercent || 1;
-
 			var ctx = this.ctx;
-
-			ctx.beginPath();
-
 			ctx.arc(this.x, this.y, this.outerRadius, this.startAngle, this.endAngle);
 
 			ctx.arc(this.x, this.y, this.innerRadius, this.endAngle, this.startAngle, true);
@@ -3358,6 +3371,15 @@
 			var scaleSizes = (this.options.scaleOverride) ?
 				{
 					steps: this.options.scaleSteps,
+					stepValue: this.options.scaleStepWidth,
+					min: this.options.scaleStartValue,
+					max: this.options.scaleStartValue + (this.options.scaleSteps * this.options.scaleStepWidth)
+				} :
+				helpers.calculateScaleRange(
+					stepValue: this.options.scaleStepWidth,
+					min: this.options.scaleStartValue,
+					stepValue: this.options.scaleStepWidth,
+					stepValue: this.options.scaleStepWidth,
 					stepValue: this.options.scaleStepWidth,
 					min: this.options.scaleStartValue,
 					max: this.options.scaleStartValue + (this.options.scaleSteps * this.options.scaleStepWidth)
