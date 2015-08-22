@@ -21,7 +21,7 @@ module TopHelper
         end_int = @end.to_i
         jpg_file_name = c.date_time.strftime("%Y%m%d%H%M%S")
         if jpg_file_name[10..13] == "3000" || jpg_file_name[10..13] == "0000"
-          next unless start_int <= jpg_file_name[8..13].to_i && jpg_file_name[8..13].to_i <= end_int
+          #next unless start_int <= jpg_file_name[8..13].to_i && jpg_file_name[8..13].to_i <= end_int
           year = c.date_time.strftime("%Y").to_i
           month = c.date_time.strftime("%m").to_i
           day = c.date_time.strftime("%d").to_i

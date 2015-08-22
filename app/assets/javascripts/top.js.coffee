@@ -1,4 +1,3 @@
-coming = "/coming.jpg"
 button_lock = 0
 slide = 0
 
@@ -10,7 +9,8 @@ $ ->
   , 500
 
   $("img").error ->
-    $(@).attr("src", coming)
+    rand = Math.floor( Math.random() * 7 ) + 1
+    $(@).attr("src", "/coming_0#{rand}.png")
     new_src = $(".big-image img").attr("src")
 
 $(document).on "click", ".menu a", ->
