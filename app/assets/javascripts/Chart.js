@@ -1147,15 +1147,11 @@
 			var hitDetectionRange = this.hitDetectionRadius + this.radius;
 			return ((Math.pow(chartX-this.x, 2)+Math.pow(chartY-this.y, 2)) < Math.pow(hitDetectionRange,2));
 		},
-		draw : function(){
+		draw: function(){
 			if (this.display){
 				var ctx = this.ctx;
 				var width = this.width = ctx.canvas.width;
-                		var height = this.height = ctx.canvas.height;
-				var line_ave = height/2;
-				var graphY = this.y*2;
-				console.log(line_ave);
-				console.log(graphY);
+        var height = this.height = ctx.canvas.height;
 				ctx.beginPath();
 				ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
 				ctx.closePath();
