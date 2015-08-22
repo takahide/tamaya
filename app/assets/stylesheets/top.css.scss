@@ -20,7 +20,7 @@ body {
 img.tamaya-button {
   cursor: pointer;
   position: absolute;
-  width: 90%;
+  width: 80%;
   opacity: 0;
 }
 
@@ -226,3 +226,128 @@ img.tamaya-button {
   width: 50px;
   z-index: 140000;
 }
+
+
+
+.copy {
+  width: 82.3%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+display: block; }
+.copy_desc {
+  color: #d8ad67;
+  text-align: center;
+  font: 100 13px / 38px Hiragino Maru Gothic Pro;
+  font-family: "ヒラギノ丸ゴ Pro W1", "Hiragino Maru Gothic Pro";
+margin-bottom: 20px; }
+.howto_title_img {
+  width: 80%;
+  max-width: 600px;
+  display: block;
+margin: 50px auto; }
+section.howto_00 {
+  position: relative;
+  margin: 0 auto;
+  width: 99%;
+  overflow: hidden;
+  margin-top: 30px;
+margin-bottom: 30px; }
+section.howto_00 .left_box {
+  display: block;
+  margin-left: 10%;
+  width: 35%;
+  float: left;
+}
+.howto_title{
+  margin-top: 40px;
+}
+
+
+section.howto_00 .right_box .right {
+  width: 80%;
+margin-left: 15px; }
+section.howto_00 .right_box {
+  float: left;
+  width: 50%;
+}
+section.howto_00 .left_box .howto_title {
+  color: #d8ad67;
+margin-bottom: 10px; }
+section.howto_00 .left_box .howto {
+  text-align: left;
+color: #ffffff; }
+section.howto_01 {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 30px;
+margin-bottom: 30px; }
+section.howto_01 .left_box {
+  display: block;
+  float: left;
+width: 50%; }
+section.howto_01 .left_box .left {
+  width: 80%;
+margin-left: 35px; }
+section.howto_01 .right_box {
+  float: left;
+margin-left: 15px; }
+section.howto_01 .right_box .howto_title {
+  font: 800 18px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+  color: #d8ad67;
+margin-bottom: 10px; }
+section.howto_01 .right_box .howto {
+  font: 500 13px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+  text-align: left;
+color: #ffffff; }
+section.howto_02 {
+  width: 78.1%;
+  margin: 0 auto;
+margin-bottom: 30px; }
+section.howto_02 .howto_title {
+  font: 800 18px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+  color: #d8ad67;
+margin-bottom: 10px; }
+section.howto_02 .howto {
+  font: 500 13px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+  text-align: left;
+  color: #ffffff;
+margin-bottom: 23px; }
+section.howto_02 .spot_desc {
+  width: 100%;
+  display: block;
+  max-width: 500px;
+margin: 0 auto; }
+section.howto_03 {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 60px;
+margin-bottom: 60px; }
+section.howto_03 .left_box {
+  display: block;
+  float: left;
+width: 50%; }
+section.howto_03 .left_box .left {
+  width: 80%;
+margin-left: 35px; }
+section.howto_03 .right_box {
+  float: left;
+margin-left: 15px; }
+section.howto_03 .right_box .howto_title {
+  font: 800 18px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+  color: #d8ad67;
+margin-bottom: 10px; }
+section.howto_03 .right_box .howto {
+  font: 500 13px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+  text-align: left;
+color: #ffffff; }
+.menu_btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+text-align: center; }
+.menu_btn img {
+  width: 49.5%;
+max-width: 300px; }
