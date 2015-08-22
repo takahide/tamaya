@@ -9,7 +9,10 @@ body {
 }
 
 .nav {
-  margin-top: 30px;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  z-index: 30000;
   p {
     text-align: center;
     color: #fff;
@@ -20,7 +23,7 @@ body {
 img.tamaya-button {
   cursor: pointer;
   position: absolute;
-  width: 80%;
+  width: 70%;
   opacity: 0;
 }
 
@@ -192,6 +195,9 @@ img.tamaya-button {
     text-align: center;
     font-size: 90%;
     color: #c94;
+    .small-message {
+      font-size: 70%;
+    }
   }
 }
 
@@ -221,8 +227,9 @@ img.tamaya-button {
 
 .question {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  padding: 12px;
+  top: 0;
+  right: 0; 
   width: 50px;
   z-index: 140000;
 }
