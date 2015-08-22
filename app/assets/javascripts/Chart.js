@@ -1151,7 +1151,11 @@
 			if (this.display){
 				var ctx = this.ctx;
 				var width = this.width = ctx.canvas.width;
-        var height = this.height = ctx.canvas.height;
+				var height = this.height = ctx.canvas.height;
+				var graphY_0 = height-100;
+				var line_ave = height/2;
+				var graphY = this.y*2;
+				
 				ctx.beginPath();
 				ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
 				ctx.closePath();
@@ -1164,11 +1168,10 @@
 				ctx.fill();
 				ctx.stroke();
 				//tamaya original
-				var graphY0 = height-100; 
 				ctx.beginPath();
                                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
                                 if(graphY < line_ave){
-                                ctx.moveTo(this.x , graphY0);
+                                ctx.moveTo(this.x , graphY_0);
                                 ctx.lineTo(this.x, this.y);
                                 }
                                 ctx.closePath();
