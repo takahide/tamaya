@@ -130,11 +130,19 @@ left: 80%; }
 
 header h1 {
   text-align: center;
-padding-top: 60px; }
+padding-top: 30px; }
 header h1 .logo {
   width: 82.3%;
   max-width: 470px;
 margin: 0 auto; }
+header h1 .logo_u{
+  width: 95%;
+  display: block;
+  margin: 0 auto; }
+header h1 .logo_b{
+  width: 55%;
+  display: block;
+  margin: 10px auto;}
 #sns{
   margin: 40px auto;
 text-align: center; }
@@ -148,6 +156,8 @@ section.top #pc_alert{
   color: #ffffff;
   font: 500 18px / 19.217px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
 }
+section.top .main .top_main{
+  margin-top: -55px;}
 iframe#twitter-widget-0{
   margin-right: 15px;
 }
@@ -174,6 +184,10 @@ section.top .open {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   text-align: center;
 margin-bottom: 24px; }
+section.top .video_link .video_img{
+  display: block;
+  width: 90%;
+  margin: 30px auto;}
 section.top .btn01 {
   width: 78.6%;
   max-width: 400px;
@@ -359,6 +373,7 @@ section.usable .desc_use .type_con {
   font: 500 14px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
 color: #ffffff; }
 section.usable .desc_use .type_con a {
+color: #fff;
 text-decoration: underline; }
 section.usable .desc_use .end {
 margin-bottom: 15px; }
@@ -378,7 +393,24 @@ section.usable .desc_use .map {
 margin: 0 auto; }
 section.usable .desc_use .spot {
 margin-right: 20px; }
-
+section.usable .pic_title{
+  font: 800 18px / 30px ""AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+    color: #d8ad67;
+    margin: 30px auto;
+    text-align: center;}
+section.usable .pic_align{
+    width: 100%;
+    margin: 5px auto;
+    text-align: center;}
+section.usable .pic_align .pic_01{
+    width: 100%;}
+section.usable .pic_align .pic_02{
+    width: 49%;
+    margin-right: 2%;}
+section.usable .pic_align .pic_03{
+    width: 49%;}
+section.usable .pic_align .pic_04{
+    width: 100%;}
 section.extra {
   width: 78%;
   position:relative;
