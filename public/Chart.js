@@ -109,7 +109,7 @@
 			scaleFontColor: "#666",
 
 			// Boolean - whether or not the chart should be responsive and resize when the browser does.
-			responsive: true,
+			responsive: false,
 
 			// Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
 			maintainAspectRatio: true,
@@ -185,6 +185,7 @@
 
 	//Create a dictionary of chart types, to allow for extension of existing types
 	Chart.types = {};
+	Chart.defaults.global.responsive = true;
 
 	//Global Chart helpers object for utility methods and classes
 	var helpers = Chart.helpers = {};
@@ -1146,72 +1147,42 @@
 			var hitDetectionRange = this.hitDetectionRadius + this.radius;
 			return ((Math.pow(chartX-this.x, 2)+Math.pow(chartY-this.y, 2)) < Math.pow(hitDetectionRange,2));
 		},
-		draw : function(){
+		draw: function(){
 			if (this.display){
 				var ctx = this.ctx;
-				//tamaya original
 				var width = this.width = ctx.canvas.width;
-                                var height = this.height = ctx.canvas.height;
-				var line_ave = height/2-20;
-				var graphY = this.y*2+20;
-				var graphY_0 = height/2 - 45;
-				var grad = new Array();
-				this.x = Math.floor(this.x);
-				graphY_0 = Math.floor(graphY_0);
-				this.y = Math.floor(this.y);
-				grad[0] = ctx.createLinearGradient(this.x,graphY_0,this.x,this.y);
-				grad[1] = ctx.createLinearGradient(this.x,graphY_0,this.x,this.y);
-				grad[2] = ctx.createLinearGradient(this.x,graphY_0,this.x,this.y);
-				grad[3] = ctx.createLinearGradient(this.x,graphY_0,this.x,this.y);
-				grad[0].addColorStop(0,'green');
-				grad[0].addColorStop(0.5,'yellow');
-				grad[0].addColorStop(1,'white');
-				grad[1].addColorStop(0,'red');
-				grad[1].addColorStop(0.5,'orange');
-				grad[1].addColorStop(1,'#B76598');
-				grad[2].addColorStop(0,'white');
-                                grad[2].addColorStop(0.5,'#5C61DA');
-                                grad[2].addColorStop(1,'#DE6AF4');
-				grad[3].addColorStop(0,'white');
-                                grad[3].addColorStop(0.5,'yellow');
-                                grad[3].addColorStop(1,'red');
-                                ctx.beginPath();
-				var img = new Array();
+				var height = this.height = ctx.canvas.height;
+				var graphY_0 = height-100;
+				var line_ave = height/2;
+				var graphY = this.y*2;
+				
+				ctx.beginPath();
+				ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+				ctx.closePath();
+
+				ctx.strokeStyle = this.strokeColor;
+				ctx.lineWidth = this.strokeWidth;
+
+				ctx.fillStyle = this.fillColor;
+
+				ctx.fill();
+				ctx.stroke();
+				//tamaya original
+				ctx.beginPath();
+                                ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
                                 if(graphY < line_ave){
                                 ctx.moveTo(this.x , graphY_0);
                                 ctx.lineTo(this.x, this.y);
                                 }
                                 ctx.closePath();
-				var r = Math.floor(Math.random()*3);
-                                ctx.strokeStyle = grad[r];
-                                ctx.lineWidth = 1;
+
+                                ctx.strokeStyle = this.strokeColor;
+                                ctx.lineWidth = 5;
 
                                 ctx.fillStyle = this.fillColor;
 
                                 ctx.fill();
                                 ctx.stroke();
-				/*ctx.beginPath();
-                                ctx.arc(65, 65, 45, 0, Math.PI*2, false);
-                                ctx.clip();*/
-                                var img = new Array();
-                                img[0] = new Image();
-				img[1] = new Image();
-				img[2] = new Image();
-				img[3] = new Image();
-				img[4] = new Image();
-				img[5] = new Image();
-				img[6] = new Image();
-                                img[0].src="http://tamayabutton.com/coming_01.png";
-				img[1].src="http://tamayabutton.com/coming_02.png";
-				img[2].src="http://tamayabutton.com/coming_03.png";
-				img[3].src="http://tamayabutton.com/coming_04.png";
-				img[4].src="http://tamayabutton.com/coming_05.png";
-				img[5].src="http://tamayabutton.com/coming_06.png";
-				img[6].src="http://tamayabutton.com/coming_07.png";
-				var a = Math.floor(Math.random()*7);
-				if(graphY < line_ave){
-                                ctx.drawImage(img[a], this.x-25, this.y-25, 50, 50);
-				}
 			}
 
 
@@ -1263,16 +1234,11 @@
 			return {
 				x : this.x + (Math.cos(centreAngle) * rangeFromCentre),
 				y : this.y + (Math.sin(centreAngle) * rangeFromCentre)
-			};
 		},
 		draw : function(animationPercent){
 
 			var easingDecimal = animationPercent || 1;
-
 			var ctx = this.ctx;
-
-			ctx.beginPath();
-
 			ctx.arc(this.x, this.y, this.outerRadius, this.startAngle, this.endAngle);
 
 			ctx.arc(this.x, this.y, this.innerRadius, this.endAngle, this.startAngle, true);
@@ -2096,7 +2062,7 @@
 		scaleShowHorizontalLines: true,
 
 		//Boolean - Whether to show vertical lines (except Y axis)
-		scaleShowVerticalLines: true,
+		scaleShowVerticalLines: false,
 
 		//Boolean - If there is a stroke on each bar
 		barShowStroke : true,
@@ -2580,7 +2546,7 @@
 		scaleShowHorizontalLines: true,
 
 		//Boolean - Whether to show vertical lines (except Y axis)
-		scaleShowVerticalLines: true,
+		scaleShowVerticalLines: false,
 
 		//Boolean - Whether the line is curved between points
 		bezierCurve : true,
@@ -3130,7 +3096,7 @@
 			helpers.each(this.segments,function(segment){
 				segment.save();
 			});
-			
+
 			this.reflow();
 			this.render();
 		},
@@ -3409,6 +3375,15 @@
 					max: this.options.scaleStartValue + (this.options.scaleSteps * this.options.scaleStepWidth)
 				} :
 				helpers.calculateScaleRange(
+					stepValue: this.options.scaleStepWidth,
+					min: this.options.scaleStartValue,
+					stepValue: this.options.scaleStepWidth,
+					stepValue: this.options.scaleStepWidth,
+					stepValue: this.options.scaleStepWidth,
+					min: this.options.scaleStartValue,
+					max: this.options.scaleStartValue + (this.options.scaleSteps * this.options.scaleStepWidth)
+				} :
+				helpers.calculateScaleRange(
 					valuesArray,
 					helpers.min([this.chart.width, this.chart.height])/2,
 					this.options.scaleFontSize,
@@ -3500,6 +3475,7 @@
 						ctx.lineTo(point.x,point.y);
 					}
 				},this);
+
 				ctx.closePath();
 				ctx.stroke();
 

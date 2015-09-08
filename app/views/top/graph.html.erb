@@ -1,5 +1,21 @@
-<%= @clicks[8092225] %>
 <canvas id="graph"></canvas>
+<div class="menu" style="z-index: 9999;">
+  <a href="/">
+    <div class="mybutton menu1">
+      <%= image_tag "menu1-inactive.png" %>
+    </div>
+  </a>
+  <a href="/my-tamaya">
+    <div class="mybutton menu2">
+      <%= image_tag "menu2-active.png" %>
+    </div>
+  </a>
+  <a href="/graph">
+    <div class="mybutton menu3">
+      <%= image_tag "menu3-inactive.png" %>
+    </div>
+  </a>
+</div> 
 <script src="/assets/javascript/Chart.js"></script>
     <script>
         var clicks = new Array();
@@ -7,11 +23,11 @@
 	var min5 = 0;
         var min5clicks = 0;
         var l = 0;
-        <% for i in 8202235..8202259 do %>
+        <% for i in 8221912..8221959 do %>
             var j = Number(<%= @clicks[i] %>);
                clicks.push(j);  
         <% end%>
-        <% for h in 8202300..8202359 do %>
+        <% for h in 8222000..8222059 do %>
             var g = Number(<%= @clicks[h] %>);
                clicks.push(g);
         <% end%>
@@ -24,6 +40,7 @@
                 min5clicks = min5clicks + clicks[l*5 + min5];
 		min5 = min5 + 1;
 	    <% end %>
+	    console.log(min5clicks);
 	    l = l + 1;
 	    per5min.push(min5clicks);
 	    min5 = 0;
@@ -31,7 +48,8 @@
 	<% end%>
 	var m = 0;
         <% for m in 1 .. 16 do %>
-        m = m + 1;
+	console.log(per5min[m]);
+	m = m + 1;
         <% end %>
         var data = {
             labels: ["19:00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "20:00", "05", "10", "15"],
