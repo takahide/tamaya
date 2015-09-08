@@ -1,7 +1,7 @@
 <div id="wrapper">
   <main>
   <header>
-    <h1><%= image_tag "logo.png", class: "logo", alt: "たまやボタン" %></h1>
+    <h1><%= image_tag "copy_e.png", class: "logo_u", alt: "目で見た花火がスマホに届く" %><%= image_tag "copy_d.png", class: "logo_b", alt: "たまやボタン" %></h1>
   </header>
   <div class="bg">
     <%= image_tag "ff_red.png", class: "bgff_01" %>
@@ -17,7 +17,7 @@
     <%= image_tag "ff_green.png", class: "bgff_11" %>
   </div>
   <section class="top">
-    <h2 class="desc">目で見た花火が、スマホに届く。<br>たまやボタン</h2>
+    <div class="main"><%= image_tag "main_img.png", class: "top_main", alt: "たまやボタン" %>
     <div id="sns">
 <a href="https://twitter.com/share" class="twitter-share-button" data-text="目で観た花火が、スマホに届く。たまやボタン。8/22（土）相模原納涼花火大会にてオープン！">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -29,17 +29,8 @@ new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"目で�
 </span>
 <div class="fb-share-button" data-href="http://tamayabutton.com" data-layout="button"></div>
 </div>
-    <h3 class="open">8/22(土)<br>相模原納涼花火大会にて<br><span class="eng">OPEN!</span></h3>
-    <div class="sns_link">
-        <p><a href="https://www.facebook.com/tamayabutton" class="facebook" target="_blank">facebookページはこちら</a>
-    </div>
-    <span id="pc_alert">※たまやボタンの使用はスマートフォンのみ可能です。</span>
-    <%= image_tag @to_button_img, class: "btn01", alt: "たまやボタンを使う", onclick: @to_button_onclick %>
-    <p class="alert">※8/22(土) 18:30にオープンします</p>
-    <%= image_tag @to_my_tamaya_img, class: "btn01", alt: "写真を受け取る", onclick: @to_my_tamaya_onclick %>
-    <p class="alert">※8/22(土) 20:20にオープンします</p>
-    <%= image_tag @to_graph_img, class: "btn01", alt: "盛り上がりグラフを見る", onclick: @to_graph_onclick %>
-    <p class="alert">※8/22(土) 20:20にオープンします</p>
+    <%= image_tag "btn_fb.png", class: "btn01", alt: "facebookページはこちら" %>
+    <div class="video_link"><%= image_tag "movie_link.png", class: "video_img", alt: "実際の映像を見る"%></div>
     <%= image_tag "ff_pink.png", class: "ff" %>
     <div class="menu_btn"><%= image_tag "about_btn.png", id: "menu_01", alt: "たまやボタンとは" %>
     </div>
@@ -127,6 +118,18 @@ new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"目で�
   <div class="desc_use">
     <h2 class="type">公式WEBサイト:</h2>
     <p class="type_con"><a href="http://www.sagamihara-hanabi.jp/" target="_blank"  class="link">http://www.sagamihara-hanabi.jp/</a>
+    </p>
+  </div>
+  <div class="desc_use">
+    <h2 class="pic_title">実際にお届けした写真</h2>
+    <p class="pic_align">
+        <%= image_tag "pic_01.png", class: "pic_01" %>
+    </p>
+    <p class="pic_align">
+        <%= image_tag "pic_02.png", class: "pic_02" %><%= image_tag "pic_03.png", class: "pic_03" %>
+    </p>
+    <p class="pic_align">
+        <%= image_tag "pic_04.png", class: "pic_04" %>
     </p>
   </div>
 </section>
