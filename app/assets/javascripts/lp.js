@@ -1,7 +1,9 @@
 $(function () {
-  openAbout();
-  openUsable();
-  $("#menu_01").css("display", "none");
+  if ($(window).width() >= 900) {
+    openAbout();
+    openUsable();
+    $("#menu_01").css("display", "none");
+  }
 });
 
 $(function () {

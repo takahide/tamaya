@@ -177,7 +177,6 @@ margin-bottom: 24px; }
 section.top .btn01 {
   width: 78.6%;
   max-width: 400px;
-  display: none;
 margin: 0 auto; }
 section.top .alert {
   font: 500 14px / 19.217px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
@@ -418,12 +417,44 @@ line-height: 60px; }
   .sp_howto {
     display: none;
   }
+  .logo_b {
+    margin-left: 15px;
+  }
+  .top_main {
+    width: 100%;
+  }
   html,body{
     overflow-x: hidden;
   }
-  main {
+  .main {
     width: 1000px;
-  margin: 0 auto; }
+    text-align: center;
+    margin: 0 auto; 
+  }
+  .main img.ff {
+    display: none;
+  }
+  .about img.copy {
+    margin-top: 80px;
+  }
+  .video_link {
+    display: none;
+    
+  }
+  br.brsp {
+    display: none;
+  }
+  .howto_title_img {
+    padding-top: 50px;
+  }
+  .pc_left {
+    width: 45%;
+    display: inline-block;
+  }
+  .pc_right {
+    width: 45%;
+    display: inline-block;
+  }
 
   section.top .desc {
   font: 100 23.5px / 42px Hiragino Maru Gothic Pro; }
