@@ -373,6 +373,7 @@ section.usable .desc_use .type_con {
   font: 500 14px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
 color: #ffffff; }
 section.usable .desc_use .type_con a {
+color: #fff;
 text-decoration: underline; }
 section.usable .desc_use .end {
 margin-bottom: 15px; }
