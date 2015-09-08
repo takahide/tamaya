@@ -1150,9 +1150,13 @@
 		draw : function(){
 			if (this.display){
 				var ctx = this.ctx;
+				var width = this.width = ctx.canvas.width;
+                		var height = this.height = ctx.canvas.height;
 				ctx.beginPath();
-
+				//tamaya original
 				ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
+				ctx.moveTo(this.x , height-40);
+				ctx.lineTo(this.x, this.y);
 				ctx.closePath();
 
 				ctx.strokeStyle = this.strokeColor;
