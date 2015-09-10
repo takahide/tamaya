@@ -17,7 +17,9 @@
     <%= image_tag "ff_green.png", class: "bgff_11" %>
   </div>
   <section class="top">
-    <div class="main"><%= image_tag "main_img.png", class: "top_main", alt: "たまやボタン" %>
+    <div class="main">
+      <%= image_tag "main_img.png", class: "top_main only_sp", alt: "たまやボタン" %>
+      <%= image_tag "top_img_pc.png", class: "top_main only_pc", alt: "たまやボタン" %>
     <div id="sns">
 <a href="https://twitter.com/share" class="twitter-share-button" data-text="目で観た花火が、スマホに届く。たまやボタン。8/22（土）相模原納涼花火大会にてオープン！">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -29,7 +31,7 @@ new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"目で�
 </span>
 <div class="fb-share-button" data-href="http://tamayabutton.com" data-layout="button"></div>
 </div>
-    <%= image_tag "btn_fb.png", class: "btn01", alt: "facebookページはこちら" %>
+<a href="https://www.facebook.com/tamayabutton" target="_blank"><%= image_tag "btn_fb.png", class: "btn01", alt: "facebookページはこちら" %></a>
     <div class="video_link"><%= image_tag "movie_link_coming.png", class: "video_img", alt: "実際の映像を見る"%></div>
     <%= image_tag "ff_pink.png", class: "ff" %>
     <div class="menu_btn"><%= image_tag "about_btn.png", id: "menu_01", alt: "たまやボタンとは" %>
@@ -125,8 +127,19 @@ new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"目で�
 <div class="menu_btn"><%= image_tag "usable_btn.png", id: "menu_02",  alt: "利用できる花火大会" %>
 </div>
 <section class="usable">
+  <div class="pc_left only_pc">
+      <p class="pic_align">
+      <%= image_tag "pic_01_ribbon.png", class: "pic_01" %>
+      </p>
+      <p class="pic_align">
+      <%= image_tag "pic_02.png", class: "pic_02" %><%= image_tag "pic_03.png", class: "pic_03" %>
+      </p>
+      <p class="pic_align">
+      <%= image_tag "pic_04.png", class: "pic_04" %>
+      </p>
+  </div>
   <div class="pc_right">
-    <h1>第44会相模原納涼花火大会</h1>
+    <h1>第44回相模原納涼花火大会</h1>
     <div class="desc_use">
       <h2 class="type">日時：</h2>
       <p class="type_con">8/22(土) 19:00~20:15</p>
@@ -152,7 +165,7 @@ new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"目で�
       </p>
     </div>
   </div>
-  <div class="pc_left">
+  <div class="only_sp">
     <div class="desc_use">
       <h2 class="pic_title">実際にお届けした写真</h2>
       <p class="pic_align">

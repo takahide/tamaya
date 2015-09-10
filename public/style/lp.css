@@ -441,8 +441,34 @@ line-height: 60px; }
 .sp_howto {
   display: block;
 }
+.only_pc {
+  display: none;
+}
+.only_sp {
+  display: block;
+}
 
 @media (min-width: 900px) {
+  header h1 .logo_u {
+    width: 65%; 
+    display: inline-block;
+  }
+  header h1 .logo_b {
+    width: 25%; 
+    margin-left: 20px;
+    display: inline-block;
+  }
+  .main {
+    width: 100%;
+  }
+  .only_pc {
+    padding-top: 100px;
+    width: 100%;
+    display: block;
+  }
+  .only_sp {
+    display: none;
+  }
   .pc_howto {
     display: block;
   }
@@ -454,6 +480,17 @@ line-height: 60px; }
   }
   .top_main {
     width: 100%;
+  }
+  section.usable {
+    width: 100%;
+  }
+  .pc_left { 
+    padding: 20px;
+    width: 30%;
+  }
+  .pc_right { 
+    padding: 20px;
+    width: 70%;
   }
   html,body{
     overflow-x: hidden;
