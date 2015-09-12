@@ -63,6 +63,7 @@ background-color: #000; }
   width: 100%;
 height: 1000px; }
 .bg .bgff_01 {
+  display:none;
   position: absolute;
   width: 30%;
   max-width: 200px;
@@ -129,6 +130,8 @@ left: -5%; }
 left: 80%; }
 
 header h1 {
+  position: relative;
+  z-index: 1000;
   text-align: center;
 padding-top: 30px; }
 header h1 .logo {
@@ -157,7 +160,7 @@ section.top #pc_alert{
   font: 500 18px / 19.217px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
 }
 section.top .main .top_main{
-  margin-top: -55px;
+  margin-top: -30px;
   width: 100%;}
   
 iframe#twitter-widget-0{
