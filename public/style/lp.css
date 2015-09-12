@@ -157,7 +157,9 @@ section.top #pc_alert{
   font: 500 18px / 19.217px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
 }
 section.top .main .top_main{
-  margin-top: -55px;}
+  margin-top: -55px;
+  width: 100%;}
+  
 iframe#twitter-widget-0{
   margin-right: 15px;
 }
