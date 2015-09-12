@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'annotate'
-#gem 'therubyracer', '= 0.10.2', platforms: :ruby
 gem 'libv8', '= 3.3.10.4'
 
 group :production do
+  gem 'therubyracer', '= 0.10.2', platforms: :ruby
   gem 'pg'
 end
 

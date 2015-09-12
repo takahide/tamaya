@@ -443,20 +443,89 @@ line-height: 60px; }
 .sp_howto {
   display: block;
 }
+.only_pc {
+  display: none;
+}
+.only_sp {
+  display: block;
+}
 
 @media (min-width: 900px) {
+  header h1 .logo_u {
+    width: 65%; 
+    display: inline-block;
+  }
+  header h1 .logo_b {
+    width: 25%; 
+    margin-left: 20px;
+    display: inline-block;
+  }
+  .main {
+    width: 100%;
+  }
+  .only_pc {
+    padding-top: 100px;
+    width: 100%;
+    display: block;
+  }
+  .only_sp {
+    display: none;
+  }
   .pc_howto {
     display: block;
   }
   .sp_howto {
     display: none;
   }
+  .logo_b {
+    margin-left: 15px;
+  }
+  .top_main {
+    width: 100%;
+  }
+  section.usable {
+    width: 100%;
+  }
+  .pc_left { 
+    padding: 20px;
+    width: 30%;
+  }
+  .pc_right { 
+    padding: 20px;
+    width: 70%;
+  }
   html,body{
     overflow-x: hidden;
   }
-  main {
+  .main {
     width: 1000px;
-  margin: 0 auto; }
+    text-align: center;
+    margin: 0 auto; 
+  }
+  .main img.ff {
+    display: none;
+  }
+  .about img.copy {
+    margin-top: 80px;
+  }
+  .video_link {
+    display: none;
+    
+  }
+  br.brsp {
+    display: none;
+  }
+  .howto_title_img {
+    padding-top: 50px;
+  }
+  .pc_left {
+    width: 45%;
+    display: inline-block;
+  }
+  .pc_right {
+    width: 45%;
+    display: inline-block;
+  }
 
   section.top .desc {
   font: 100 23.5px / 42px Hiragino Maru Gothic Pro; }

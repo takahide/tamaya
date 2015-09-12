@@ -4,8 +4,8 @@
     <h1><%= image_tag "copy_e.png", class: "logo_u", alt: "目で見た花火がスマホに届く" %><%= image_tag "copy_d.png", class: "logo_b", alt: "たまやボタン" %></h1>
   </header>
   <div class="bg">
-    <%= image_tag "ff_red.png", class: "bgff_01" %>
-    <%= image_tag "ff_blue.png", class: "bgff_02" %>
+    <%= image_tag "ff_red.png", class: "bgff_01 only_sp" %>
+    <%= image_tag "ff_blue.png", class: "bgff_02 only_sp" %>
     <%= image_tag "ff_green.png", class: "bgff_03" %>
     <%= image_tag "ff_pink.png", class: "bgff_04" %>
     <%= image_tag "ff_red.png", class: "bgff_05" %>
@@ -17,7 +17,9 @@
     <%= image_tag "ff_green.png", class: "bgff_11" %>
   </div>
   <section class="top">
-    <div class="main"><%= image_tag "main_img.png", class: "top_main", alt: "たまやボタン" %>
+    <div class="main">
+      <%= image_tag "main_img.png", class: "top_main only_sp", alt: "たまやボタン" %>
+      <%= image_tag "top_img_pc.png", class: "top_main only_pc", alt: "たまやボタン" %>
     <div id="sns">
 <a href="https://twitter.com/share" class="twitter-share-button" data-text="目で観た花火が、スマホに届く。たまやボタン。8/22（土）相模原納涼花火大会にてオープン！">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -29,7 +31,7 @@ new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"目で�
 </span>
 <div class="fb-share-button" data-href="http://tamayabutton.com" data-layout="button"></div>
 </div>
-    <%= image_tag "btn_fb.png", class: "btn01", alt: "facebookページはこちら" %>
+<a href="https://www.facebook.com/tamayabutton" target="_blank"><%= image_tag "btn_fb.png", class: "btn01", alt: "facebookページはこちら" %></a>
     <div class="video_link"><%= image_tag "movie_link_coming.png", class: "video_img", alt: "実際の映像を見る"%></div>
     <%= image_tag "ff_pink.png", class: "ff" %>
     <div class="menu_btn"><%= image_tag "about_btn.png", id: "menu_01", alt: "たまやボタンとは" %>
@@ -38,12 +40,12 @@ new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"目で�
   <section class="about">
     <%= image_tag "copy.png", class: "copy" %>
     <p class="copy_desc">日本には、二度と出会えない
-    <br>一瞬の美しさがあります。</p>
+    <br class="brsp">一瞬の美しさがあります。</p>
     <p class="copy_desc">上がっては消えてゆく、夏の風物詩「花火」。
     <br>しかし、スマホ全盛時代の今、
-    <br>写真を撮るのに夢中のあまり、
+    <br class="brsp">写真を撮るのに夢中のあまり、
     <br>大事な瞬間をスマホ越しに
-    <br>観てしまう人も少なくありません</p>
+    <br class="brsp">観てしまう人も少なくありません</p>
     <p class="copy_desc">「たまやボタン」は、スマホをかざさなくても、
     <br>あなたの代わりにあなたが撮りたい瞬間を記録する、
     <br>新しい形の花火鑑賞サービスです。</p>
@@ -125,42 +127,57 @@ new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"目で�
 <div class="menu_btn"><%= image_tag "usable_btn.png", id: "menu_02",  alt: "利用できる花火大会" %>
 </div>
 <section class="usable">
-  <h1>第44会相模原納涼花火大会</h1>
-  <div class="desc_use">
-    <h2 class="type">日時：</h2>
-    <p class="type_con">8/22(土) 19:00~20:15</p>
-    <p class="alert">※サービスオープンは18:30〜となります</p>
+  <div class="pc_left only_pc">
+      <p class="pic_align">
+      <%= image_tag "pic_01_ribbon.png", class: "pic_01" %>
+      </p>
+      <p class="pic_align">
+      <%= image_tag "pic_02.png", class: "pic_02" %><%= image_tag "pic_03.png", class: "pic_03" %>
+      </p>
+      <p class="pic_align">
+      <%= image_tag "pic_04.png", class: "pic_04" %>
+      </p>
   </div>
-  <div class="desc_use">
-    <h2 class="type">会場：</h2>
-    <p class="type_con end">相模原市中央区水郷田名 相模川高田橋上流</p>
-    <a href="https://www.google.com/maps?ll=35.541147,139.325755&z=16&t=m&hl=ja&gl=US&mapclient=embed&q=35%C2%B032%2735.1%22N+139%C2%B019%2737.3%22E@35.543076,139.3270316" target="_blank"><%= image_tag "btn_04.png", class:"btn02" %>
+  <div class="pc_right">
+    <h1>第44回相模原納涼花火大会</h1>
+    <div class="desc_use">
+      <h2 class="type">日時：</h2>
+      <p class="type_con">8/22(土) 19:00~20:15</p>
+      <p class="alert">※サービスオープンは18:30〜となります</p>
+    </div>
+    <div class="desc_use">
+      <h2 class="type">会場：</h2>
+      <p class="type_con end">相模原市中央区水郷田名 相模川高田橋上流</p>
+      <a href="https://www.google.com/maps?ll=35.541147,139.325755&z=16&t=m&hl=ja&gl=US&mapclient=embed&q=35%C2%B032%2735.1%22N+139%C2%B019%2737.3%22E@35.543076,139.3270316" target="_blank"><%= image_tag "btn_04.png", class:"btn02" %>
     </a>
+    </div>
+    <div class="desc_use">
+      <h2 class="type">撮影スポット：</h2>
+      <%= image_tag "map.png", class: "map" %>
+      <p class="type_con"><span class="spot">A:川</span><span class="spot">B:有料観覧席</span>
+      </p>
+      <p class="type_con"><span class="spot">C:アメニティタワー</span><span class="spot">D:駐車場</span>
+      </p>
+    </div>
+    <div class="desc_use">
+      <h2 class="type">公式WEBサイト:</h2>
+      <p class="type_con"><a href="http://www.sagamihara-hanabi.jp/" target="_blank"  class="link">http://www.sagamihara-hanabi.jp/</a>
+      </p>
+    </div>
   </div>
-  <div class="desc_use">
-    <h2 class="type">撮影スポット：</h2>
-    <%= image_tag "map.png", class: "map" %>
-    <p class="type_con"><span class="spot">A:川</span><span class="spot">B:有料観覧席</span>
-    </p>
-    <p class="type_con"><span class="spot">C:アメニティタワー</span><span class="spot">D:駐車場</span>
-    </p>
-  </div>
-  <div class="desc_use">
-    <h2 class="type">公式WEBサイト:</h2>
-    <p class="type_con"><a href="http://www.sagamihara-hanabi.jp/" target="_blank"  class="link">http://www.sagamihara-hanabi.jp/</a>
-    </p>
-  </div>
-  <div class="desc_use">
-    <h2 class="pic_title">実際にお届けした写真</h2>
-    <p class="pic_align">
-        <%= image_tag "pic_01.png", class: "pic_01" %>
-    </p>
-    <p class="pic_align">
-        <%= image_tag "pic_02.png", class: "pic_02" %><%= image_tag "pic_03.png", class: "pic_03" %>
-    </p>
-    <p class="pic_align">
-        <%= image_tag "pic_04.png", class: "pic_04" %>
-    </p>
+  <div class="only_sp">
+    <div class="desc_use">
+      <h2 class="pic_title">実際にお届けした写真</h2>
+      <p class="pic_align">
+      <%= image_tag "pic_01.png", class: "pic_01" %>
+      </p>
+      <p class="pic_align">
+      <%= image_tag "pic_02.png", class: "pic_02" %><%= image_tag "pic_03.png", class: "pic_03" %>
+      </p>
+      <p class="pic_align">
+      <%= image_tag "pic_04.png", class: "pic_04" %>
+      </p>
+    </div>
   </div>
 </section>
 <section class="extra">
