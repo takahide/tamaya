@@ -264,7 +264,7 @@ section.about section.howto_00 .right_box {
   width: 50%;
 }
 section.about section.howto_00 .left_box .howto_title {
-  font: 800 18px / 30px ""AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+  font: 800 18px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",     "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
   color: #d8ad67;
 margin-bottom: 10px; }
 section.about section.howto_00 .left_box .howto {
@@ -399,7 +399,7 @@ margin: 0 auto; }
 section.usable .desc_use .spot {
 margin-right: 20px; }
 section.usable .pic_title{
-  font: 800 18px / 30px ""AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+    font: 800 18px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",     "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
     color: #d8ad67;
     margin: 30px auto;
     text-align: center;}
