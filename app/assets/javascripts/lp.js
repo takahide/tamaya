@@ -40,7 +40,7 @@ function openUsable() {
   if ($(".usable").hasClass("open")) {
     $(".usable").removeClass("open");
     $(".usable").slideToggle();
-    $("#menu_02").attr("src", "/usable_btn.png");
+    $("#menu_02").attr("src", "/done_menu_01.png");
     if ($("section.about").hasClass("open")) {
       $(".bg").animate({
         "height": "3500px"
@@ -53,7 +53,7 @@ function openUsable() {
   } else {
     $(".usable").slideToggle();
     $(".usable").addClass("open");
-    $("#menu_02").attr("src", "/usable_btn_active.png");
+    $("#menu_02").attr("src", "/done_menu.png");
     if ($("section.about").hasClass("open")) {
       $(".bg").animate({
         "height": "3000px"

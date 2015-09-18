@@ -19,6 +19,10 @@ time, mark, audio, video {
   font-size: 100%;
 vertical-align: baseline; }
 
+.main {
+  text-align: center;
+}
+
 html {
 line-height: 1; }
 
@@ -63,6 +67,7 @@ background-color: #000; }
   width: 100%;
 height: 1000px; }
 .bg .bgff_01 {
+  display:none;
   position: absolute;
   width: 30%;
   max-width: 200px;
@@ -129,6 +134,8 @@ left: -5%; }
 left: 80%; }
 
 header h1 {
+  position: relative;
+  z-index: 1000;
   text-align: center;
 padding-top: 30px; }
 header h1 .logo {
@@ -157,7 +164,9 @@ section.top #pc_alert{
   font: 500 18px / 19.217px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
 }
 section.top .main .top_main{
-  margin-top: -55px;}
+  margin-top: -30px;
+  width: 100%;}
+  
 iframe#twitter-widget-0{
   margin-right: 15px;
 }
@@ -259,7 +268,7 @@ section.about section.howto_00 .right_box {
   width: 50%;
 }
 section.about section.howto_00 .left_box .howto_title {
-  font: 800 18px / 30px ""AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+  font: 800 18px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",     "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
   color: #d8ad67;
 margin-bottom: 10px; }
 section.about section.howto_00 .left_box .howto {
@@ -394,7 +403,7 @@ margin: 0 auto; }
 section.usable .desc_use .spot {
 margin-right: 20px; }
 section.usable .pic_title{
-  font: 800 18px / 30px ""AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
+    font: 800 18px / 30px "AxisStd", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",     "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシッ>ク", "MS PGothic", sans-serif;
     color: #d8ad67;
     margin: 30px auto;
     text-align: center;}
