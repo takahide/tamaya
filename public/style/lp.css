@@ -19,6 +19,10 @@ time, mark, audio, video {
   font-size: 100%;
 vertical-align: baseline; }
 
+.main {
+  text-align: center;
+}
+
 html {
 line-height: 1; }
 
@@ -673,3 +677,4 @@ line-height: 60px; }
     color: #ffffff;
   } 
 }
+
