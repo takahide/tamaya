@@ -13,6 +13,13 @@
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
+@media (max-width: 900px) {
+
+.popup,
+.login-screen {
+    top: 42% !important;
+}
+}
 .modal-overlay.modal-overlay-visible,
 .preloader-indicator-overlay.modal-overlay-visible,
 .popup-overlay.modal-overlay-visible {
