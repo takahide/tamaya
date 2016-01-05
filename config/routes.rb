@@ -1,6 +1,7 @@
 Tamaya::Application.routes.draw do
 
   get '/' => 'lp#index'
+  get '/en' => 'lp#en'
   get '/button' => 'top#index'
   get '/my-tamaya' => 'top#my_tamaya'
   get '/graph' => 'top#graph'
