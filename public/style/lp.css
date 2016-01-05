@@ -233,6 +233,9 @@ section.about .copy {
   margin: 0 auto;
   margin-bottom: 30px;
 display: block; }
+section.about .copy.english {
+  width: 15%;
+display: block; }
 section.about .copy_desc {
   color: #d8ad67;
   text-align: center;
@@ -678,3 +681,13 @@ line-height: 60px; }
   } 
 }
 
+
+
+
+
+
+section.about .copy_desc.english {
+  font: 100 18px / 28px serif;
+  width: 80%;
+  margin: 0 auto;
+}
