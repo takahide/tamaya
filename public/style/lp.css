@@ -460,7 +460,7 @@ line-height: 60px; }
   display: block;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 100px) {
   header h1 .logo_u {
     width: 65%; 
     display: inline-block;
@@ -681,13 +681,23 @@ line-height: 60px; }
   } 
 }
 
-
-
-
-
-
 section.about .copy_desc.english {
   font: 100 18px / 28px serif;
   width: 80%;
   margin: 0 auto;
 }
+
+section.about .copy_desc.english.big {
+  font: 100 22px / 28px serif;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.howto2.gold {
+  font: 100 15px / 28px serif;
+  text-align: center;
+  color: #d8ad67;
+  width: 90%;
+  margin: 0 auto;
+}
+

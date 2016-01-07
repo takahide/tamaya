@@ -1,5 +1,5 @@
 $(function () {
-  if ($(window).width() >= 900) {
+  if ($(window).width() >= 100) {
     openAbout();
     openUsable();
     $("#menu_01").css("display", "none");

@@ -9,7 +9,9 @@
 <div id="wrapper">
   <main>
   <header>
-    <h1><%= image_tag "en_top.jpg", class: "logo_u", alt: "Fire Snap Button" %></h1>
+    <div style= "width: 95%;">
+    <%= image_tag "en_top.jpg", alt: "Fire Snap Button", style: "width: 100%; margin: 0 auto;" %>
+    </div>
   </header>
   <div class="bg">
     <%= image_tag "ff_red.png", class: "bgff_01 only_sp" %>
@@ -39,16 +41,24 @@
     </div>
   </section>
   <section class="about">
-    <%= image_tag "challenge.png", class: "copy english" %>
+    <div style="width: 160px; margin: 0 auto 20px;">
+      <%= image_tag "challenge.png", width: "100%" %>
+    </div>
     <p class="copy_desc english">Fireworks festivals are an integral part of the Japanese summer. Every day of this season, many are taking place, all over the country. Nowadays, though, everyone watches the fireworks through their smartphones. This is no how these festivals were meant to be enjoyed. For these people, imprisoned behind their degital screens, we are offering the chance of freedom.</p>
-    <%= image_tag "challenge2.png", width: "300" %>
-    <%= image_tag "solution.png", class: "copy english" %>
+    <div style="width: 400px; margin: 30px auto;">
+      <%= image_tag "challenge2.png", style: " width: 100%; margin: 0 auto;" %>
+    </div>
+    <div style="width: 160px; margin: 0 auto 20px;">
+      <%= image_tag "solution.png", width: "100%" %>
+    </div>
     <p class="copy_desc english">A special web app service that allows you to take home these impressive moments without missing the real thing. Simply tap the screen at your favourite points, and a photo of the fireworks at this exact moment will be sent to your smartphones. After the event you can browse at your leisure through high quality photographs taken from various different angles. Furthermore, the total number of taps from all the festival goers are plotted onto one graph, so at just a glance you can see the overall most popular and exciting moments of the whole festival.</p>
     <div class="sp_howto">
       <section class="howto_00">
         <div class="left_box">
-          <h2 class="howto_title">Tap</h2>
-          <p class="howto">As you watch the fireworks, tap the button at the moment you think "I want to save this!"</p>
+          <h2 class="howto_title">
+            <%= image_tag "tap.png", style: " width: 100%; margin: 0 auto;" %>
+          </h2>
+          <p class="howto2 gold">As you watch the fireworks, tap the button at the moment you think "I want to save this!"</p>
         </div>
         <div class="right_box">
           <%= image_tag "tamaya_img.png", class: "right" %>
@@ -59,14 +69,18 @@
           <%= image_tag "hanabi_dis.png", class: "left" %>
         </div>
         <div class="right_box">
-          <h2 class="howto_title">Get</h2>
-          <p class="howto">Once the festival is over, you'll receive a photo of the fireworks taken at that precise moment.</p>
+          <h2 class="howto_title">
+            <%= image_tag "get.png", style: " width: 100%; margin: 0 auto;" %>
+          </h2>
+          <p class="howto2 gold">Once the festival is over, you'll receive a photo of the fireworks taken at that precise moment.</p>
         </div>
       </section>
       <section class="howto_00">
         <div class="left_box">
-          <h2 class="howto_title">Visualize</h2>
-          <p class="howto">The button taps are charted on a graph, visualizing the points at which crowd excitement peaks.</p>
+          <h2 class="howto_title">
+            <%= image_tag "visualize.png", style: " width: 100%; margin: 0 auto;" %>
+          </h2>
+          <p class="howto2 gold">The button taps are charted on a graph, visualizing the points at which crowd excitement peaks.</p>
         </div>
         <div class="right_box">
           <%= image_tag "graph_ui.png", class: "right" %>
@@ -79,8 +93,10 @@
           <%= image_tag "step1.png", class: "right", width: "300" %>
         </div>
         <div class="bottom_box">
-          <h2 class="howto_title">Tap</h2>
-          <p class="howto">As you watch the fireworks, tap the button at the moment you think "I want to save this!"</p>
+          <h2 class="howto_title">
+            <%= image_tag "tap.png", style: " width: 150px; margin: 0 auto;" %>
+          </h2>
+          <p class="howto2 gold">As you watch the fireworks, tap the button at the moment you think "I want to save this!"</p>
         </div>
       </section>
       <section class="howto_05">
@@ -88,8 +104,10 @@
           <%= image_tag "step2.png", class: "left", width: "300" %>
         </div>
         <div class="bottom_box">
-          <h2 class="howto_title">Get</h2>
-          <p class="howto">Once the festival is over, you'll receive a photo of the fireworks taken at that precise moment.</p>
+          <h2 class="howto_title">
+            <%= image_tag "get.png", style: " width: 150px; margin: 0 auto;" %>
+          </h2>
+          <p class="howto2 gold">Once the festival is over, you'll receive a photo of the fireworks taken at that precise moment.</p>
         </div>
       </section>
       <section class="howto_05">
@@ -97,15 +115,21 @@
           <%= image_tag "step3.png", class: "right", width: "300" %>
         </div>
         <div class="bottom_box">
-          <h2 class="howto_title">Visualize</h2>
-          <p class="howto">The button taps are charted on a graph, visualizing the points at which crowd excitement peaks.</p>
+          <h2 class="howto_title">
+            <%= image_tag "visualize.png", style: " width: 150px; margin: 0 auto;" %>
+          </h2>
+          <p class="howto2 gold">The button taps are charted on a graph, visualizing the points at which crowd excitement peaks.</p>
         </div>
       </section>
     </div>
-    <%= image_tag "result.png", class: "copy english" %>
+    <div style="width: 160px; margin: 0 auto 20px;">
+      <%= image_tag "result.png", width: "100%" %>
+    </div>
     <p class="copy_desc english">At the festival where the test launch was held, the service was used by 1,000 people in one day. The Fireworks Button was tapped 60, 000 times. After the festival we received many enqueries from firework display companies, and from next year we're looking into offering the service at various different events.</p>
+    <div style="width: 50px; margin: 10px auto;">
     <%= image_tag "dots.png", width: "50" %>
-    <p class="copy_desc english">Once again, we can experience the beauty of firework as they were meant to be enjoyed. See the fireworks with your eyes. Save them to your smartphone.</p>
+    </div>
+    <p class="copy_desc english big">Once again, we can experience the beauty of firework as they were meant to be enjoyed. See the fireworks with your eyes. Save them to your smartphone.</p>
   </div>
   <%= image_tag "bottom.jpg", class: "logo_u" %>
 </section>
