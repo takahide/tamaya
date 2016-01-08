@@ -29,7 +29,7 @@ function openAbout() {
   } else {
     $(".about").slideToggle();
     $(".bg").animate({
-      "height": "3000px"
+//      "height": "3000px"
     }, 1000);
     $(".about").addClass("open");
     $("#menu_01").attr("src", "/howto_btn.png");
@@ -56,7 +56,7 @@ function openUsable() {
     $("#menu_02").attr("src", "/done_menu.png");
     if ($("section.about").hasClass("open")) {
       $(".bg").animate({
-        "height": "3000px"
+//        "height": "3000px"
       }, 1000);
     } else {
       $(".bg").animate({
